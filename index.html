@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrición & Entrenamiento Premium | Bienestar con Ciencia</title>
+  <meta name="description" content="Programa de nutrición y entrenamiento personalizado para adultos que buscan resultados medibles con un trato premium."/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1115; --card:#151823; --text:#f4f6fa; --muted:#a9b0c0; --brand:#7fd1ae; --brand2:#86b7ff; --accent:#ffd580;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    body{background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%;display:block}
+    .container{width:min(1120px,92%);margin:auto}
+    .btn{display:inline-block;padding:14px 22px;border-radius:14px;font-weight:700;letter-spacing:.2px}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#0b0f14}
+    .btn-ghost{border:1px solid #2a2f3c;color:var(--text);backdrop-filter: blur(6px);}
+    .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:#111520;border:1px solid #1e2330;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}
+    header{position:sticky;top:0;z-index:40;background:rgba(15,17,21,.75);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+    nav a:hover{opacity:.85}
+    /* HERO */
+    .hero{padding:84px 0 48px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
+    .hero h1{font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
+    .hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
+    .card{background:var(--card);border:1px solid #222636;border-radius:20px}
+    .hero-media{position:relative;border-radius:22px;overflow:hidden}
+    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    /* SECTIONS */
+    section{padding:64px 0}
+    h2{font-size:clamp(26px,3vw,36px);margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .feature{padding:22px;border-radius:18px;border:1px solid #222636;background:linear-gradient(180deg,#141827, #10131c)}
+    .feature h3{margin:0 0 6px;font-size:18px}
+    .feature p{margin:0;color:var(--muted)}
+    .testimonial{padding:22px;border-radius:18px;border:1px solid #222636;background:#12161f}
+    .price{padding:28px;border-radius:20px;border:1px solid #222636;background:linear-gradient(180deg,#161b28,#121622)}
+    .price h3{margin:0 0 8px}
+    .price .amount{font-size:32px;font-weight:800}
+    /* FORM */
+    form{display:grid;gap:14px}
+    input,textarea,select{background:#0e121a;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
+    input::placeholder,textarea::placeholder{color:#80869a}
+    .disclaimer{font-size:12px;color:var(--muted)}
+    /* FOOTER */
+    footer{padding:36px 0;border-top:1px solid #1c2130;color:var(--muted)}
+    /* RESPONSIVE */
+    @media (max-width: 980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));"></div>
+          <strong>Nutrición & Performance</strong>
+        </div>
+        <ul>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#precios">Planes</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#contacto" class="btn btn-primary">Agenda tu valoración</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div>
+      <span class="pill">Premium · Personalizado · Basado en evidencia</span>
+      <h1>Alimenta tu mejor versión: nutrición clínica + entrenamiento inteligente</h1>
+      <p>Para mujeres y hombres ocupados que buscan resultados medibles sin soluciones mágicas. Protocolos claros, seguimiento real y una experiencia a la altura de tu estilo de vida.</p>
+      <div class="tag-row">
+        <span class="pill">Bajo IG / GL</span>
+        <span class="pill">Pérdida de grasa elegante</span>
+        <span class="pill">Rendimiento & longevidad</span>
+        <span class="pill">Online o presencial</span>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:18px">
+        <a class="btn btn-primary shadow-xl" href="#contacto">Empezar ahora</a>
+        <a class="btn btn-ghost" href="#videos">Ver método en 60s</a>
+      </div>
+      <p class="muted" style="margin-top:10px;font-size:13px">Atención a clientes de clase media–alta. Cupos limitados por agenda.</p>
+    </div>
+    <div class="hero-media card shadow-xl">
+      <video controls playsinline poster="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1400&auto=format&fit=crop">
+        <source src="" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="beneficios">
+    <div class="container">
+      <h2>Lo que obtienes</h2>
+      <p class="muted">Diseñado para personas exigentes que valoran el tiempo, la claridad y los resultados.</p>
+      <div class="grid-3" style="margin-top:20px">
+        <div class="feature">
+          <h3>Plan clínico personal</h3>
+          <p>Menús con bajo índice glucémico, carga controlada y observaciones clínicas. Adaptado a tus biomarcadores y preferencias.</p>
+        </div>
+        <div class="feature">
+          <h3>Entrenamiento eficiente</h3>
+          <p>Rutinas de 45–60 min con progresión de cargas, técnica y descansos óptimos. Sin perder horas en el gym.</p>
+        </div>
+        <div class="feature">
+          <h3>Seguimiento premium</h3>
+          <p>Revisiones semanales, ajustes finos y dashboard de progreso. Comunicación directa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Método + Video 2 -->
+  <section id="metodo">
+    <div class="container grid-2">
+      <div>
+        <h2>Método Z‑FIT 180</h2>
+        <p class="muted">Combinamos fuerza, cardio inteligente, movilidad y educación nutricional para lograr cambios sostenibles.</p>
+        <ul class="muted">
+          <li>Evaluación inicial (historia clínica, hábitos, composición corporal)</li>
+          <li>Plan alimentario por tiempos de comida (SMAE) con recetas</li>
+          <li>Programa de entrenamiento por fases (hipertrofia, fuerza, condición)</li>
+          <li>Checklist de recuperación: sueño, estrés y micronutrición</li>
+        </ul>
+        <div style="margin-top:14px">
+          <a class="btn btn-primary" href="#contacto">Solicitar valoración</a>
+        </div>
+      </div>
+      <div class="card shadow-xl" id="videos">
+        <video controls playsinline poster="https://images.unsplash.com/photo-1546484959-f9a53db89f4d?q=80&w=1400&auto=format&fit=crop">
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section>
+    <div class="container">
+      <h2>Historias reales</h2>
+      <div class="grid-3" style="margin-top:18px">
+        <div class="testimonial">
+          <p>“Perdí 7 kg en 10 semanas sin sentirme restringida. El plan es claro y sostenible.”</p>
+          <p class="muted">— Laura M., Ejecutiva</p>
+        </div>
+        <div class="testimonial">
+          <p>“Mi glucosa en rango y más energía para entrenar. Seguimiento impecable.”</p>
+          <p class="muted">— Carlos R., Emprendedor</p>
+        </div>
+        <div class="testimonial">
+          <p>“Me encantó el enfoque clínico con sabor gourmet. Vale cada peso.”</p>
+          <p class="muted">— Andrea P., Arquitecta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section id="precios">
+    <div class="container">
+      <h2>Planes</h2>
+      <p class="muted">Invierte en tu salud con opciones flexibles</p>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="price">
+          <h3>Start</h3>
+          <div class="amount">$1,790 MXN</div>
+          <p class="muted">/ mes</p>
+          <ul class="muted">
+            <li>Plan alimentario personalizado</li>
+            <li>Rutina base 4 semanas</li>
+            <li>1 ajuste quincenal</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Elegir Start</a>
+        </div>
+        <div class="price" style="border-color:var(--accent)">
+          <h3>Premium</h3>
+          <div class="amount">$2,690 MXN</div>
+          <p class="muted">/ mes</p>
+          <ul class="muted">
+            <li>Plan clínico + recetas</li>
+            <li>Programa de entrenamiento progresivo</li>
+            <li>Revisión semanal + WhatsApp</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Elegir Premium</a>
+        </div>
+        <div class="price">
+          <h3>Elite</h3>
+          <div class="amount">$4,990 MXN</div>
+          <p class="muted">/ mes</p>
+          <ul class="muted">
+            <li>Todo lo de Premium</li>
+            <li>Sesiones 1:1 (semanales)</li>
+            <li>Reportes para tu médico</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Elegir Elite</a>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px">*Precios de referencia; ajústalos a tu mercado.</p>
+    </div>
+  </section>
+
+  <!-- Contacto / Lead Form -->
+  <section id="contacto">
+    <div class="container grid-2">
+      <div>
+        <h2>Agenda tu valoración</h2>
+        <p class="muted">Cuéntanos sobre tu objetivo y agenda una llamada de 15 minutos.</p>
+        <!-- Reemplaza el endpoint de Formspree por el tuyo -->
+        <form id="leadForm" class="card" style="padding:18px" action="https://formspree.io/f/xxxxxxxx" method="POST">
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="telefono" placeholder="WhatsApp" required>
+          <select name="objetivo" required>
+            <option value="">Tu objetivo</option>
+            <option>Pérdida de grasa</option>
+            <option>Rendimiento</option>
+            <option>Control de glucosa</option>
+            <option>Salud general</option>
+          </select>
+          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu caso"></textarea>
+          <button class="btn btn-primary" type="submit">Quiero mi valoración</button>
+          <p class="disclaimer">Al continuar aceptas ser contactado(a) por WhatsApp o email. Sin spam.</p>
+        </form>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <!-- Reemplaza con tu número real en formato internacional -->
+          <a class="pill" href="https://wa.me/5210000000000" target="_blank">WhatsApp inmediato</a>
+          <a class="pill" href="#precios">Ver planes</a>
+        </div>
+      </div>
+      <div class="card" style="padding:22px">
+        <h3 style="margin-top:0">¿Qué pasa después?</h3>
+        <ol class="muted">
+          <li>Te escribimos para coordinar la llamada.</li>
+          <li>Evaluación rápida y definición de objetivos.</li>
+          <li>Inicio del plan en 48–72 h.</li>
+        </ol>
+        <div class="card" style="padding:12px;margin-top:16px;background:#0f131c">
+          <strong>Atendemos CDMX/Guadalajara y online.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Nutrición & Performance — Todos los derechos reservados</div>
+      <div style="display:flex;gap:16px">
+        <a href="#">Aviso de privacidad</a>
+        <a href="#">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Validación mínima de formulario
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', (e)=>{
+      const tel = form.telefono.value.trim();
+      if(tel && !/^[0-9+\-\s]{8,}$/.test(tel)){
+        e.preventDefault();
+        alert('Por favor ingresa un WhatsApp válido.');
+      }
+    });
+  </script>
+</body>
+</html>
