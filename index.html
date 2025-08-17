@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0F4C5C">
   <title>NutriElite | Nutrición &amp; Entrenamiento Premium</title>
   <meta name="description" content="NutriElite: nutrición clínica y entrenamiento inteligente para resultados medibles. Diseñado para clientes de clase media–alta."/>
+  <!-- Si tienes el archivo en /assets -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,45 +15,81 @@
       --bg:#0C0F13; --card:#121620; --text:#F5F7FA; --muted:#A7B0C2;
       --gold:#D9AE5F; --petrol:#0F4C5C; --accent:#5FD1B8;
     }
-    *{box-sizing:border-box} html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
     body{background:var(--bg);color:var(--text);line-height:1.55}
-    a{color:inherit;text-decoration:none} img,video{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%;display:block}
     .container{width:min(1120px,92%);margin:auto}
-    .btn{display:inline-block;padding:14px 22px;border-radius:14px;font-weight:700;letter-spacing:.2px}
-    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--petrol));color:#0b0f14}
+
+    /* Botones (mejora contraste y focus) */
+    .btn{display:inline-block;padding:14px 22px;border-radius:14px;font-weight:700;letter-spacing:.2px;transition:.2s ease; outline: none;}
+    .btn:focus-visible{box-shadow:0 0 0 3px rgba(217,174,95,.45)}
+    /* Si quieres texto dorado sobre azul petróleo, déjalo así; si prefieres más contraste, cambia color:#0b0f14 o #ffffff */
+    .btn-primary{background:var(--petrol);color:var(--gold);border:1px solid rgba(217,174,95,.35)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.35)}
     .btn-ghost{border:1px solid #2a2f3c;color:var(--text);backdrop-filter: blur(6px);}
     .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)}
     .pill{display:inline-flex;gap:8px;align-items:center;background:#0b0f14;border:1px solid #1e2330;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}
-    header{position:sticky;top:0;z-index:40;background:rgba(12,15,19,.75);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0} nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0} nav a:hover{opacity:.85}
-    .brand{display:flex;align-items:center;gap:12px} .brand img{width:36px;height:36px} .brand strong{letter-spacing:.4px}
+
+    header{position:sticky;top:0;z-index:40;background:rgba(12,15,19,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
+    nav[role="navigation"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+    nav a:hover{opacity:.85}
+
     /* HERO */
     .hero{padding:84px 0 48px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
     .hero h1{font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
     .hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
     .card{background:var(--card);border:1px solid #222636;border-radius:20px}
     .hero-media{position:relative;border-radius:22px;overflow:hidden; background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover; min-height:360px}
+
     .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    /* SECTIONS */
-    section{padding:64px 0} h2{font-size:clamp(26px,3vw,36px);margin:0 0 14px} .muted{color:var(--muted)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px} .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    .feature{padding:22px;border-radius:18px;border:1px solid #222636;background:linear-gradient(180deg,#141827, #10131c)}
-    .feature h3{margin:0 0 6px;font-size:18px} .feature p{margin:0;color:var(--muted)}
-    .testimonial{padding:22px;border-radius:18px;border:1px solid #222636;background:#12161f}
     .accent-bar{width:64px;height:6px;background:linear-gradient(90deg,var(--gold),var(--petrol));border-radius:999px;margin:10px 0}
+
+    /* SECTIONS */
+    section{padding:64px 0}
+    h2{font-size:clamp(26px,3vw,36px);margin:0 0 14px}
+    .muted{color:var(--muted)}
+
+    /* Más responsive usando auto-fit */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+
+    /* Tarjetas con borde dorado suave */
+    .feature{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.3);background:linear-gradient(180deg,#141827,#10131c)}
+    .feature h3{margin:0 0 6px;font-size:18px}
+    .feature p{margin:0;color:var(--muted)}
+    .testimonial{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.2);background:#12161f}
+
     /* FORM */
-    form{display:grid;gap:14px} input,textarea,select{background:#0e121a;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
-    input::placeholder,textarea::placeholder{color:#80869a} .disclaimer{font-size:12px;color:var(--muted)}
-    /* FOOTER */ footer{padding:36px 0;border-top:1px solid #1c2130;color:var(--muted)}
-    /* RESPONSIVE */ @media (max-width: 980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+    form{display:grid;gap:14px}
+    input,textarea,select{background:#0e121a;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
+    input::placeholder,textarea::placeholder{color:#80869a}
+    .disclaimer{font-size:12px;color:var(--muted)}
+
+    /* Embeds/videos responsive (si usas iframes también) */
+    .video-box{position:relative;border-radius:20px;overflow:hidden;border:2px solid rgba(217,174,95,.3)}
+    .video-box > *{width:100%;aspect-ratio:16/9;height:auto;display:block}
+
+    /* FOOTER */ 
+    footer{padding:36px 0;border-top:1px solid #1c2130;color:var(--muted)}
+
+    /* RESPONSIVE refinado */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+      .grid-2{grid-template-columns:1fr}
+      nav ul{gap:14px;flex-wrap:wrap}
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <nav>
+      <nav role="navigation" aria-label="Principal">
         <div class="brand">
-          <img src="assets/favicon.svg" alt="NutriElite">
+          <img src="assets/favicon.svg" alt="Logotipo NutriElite">
           <strong>NutriElite</strong>
         </div>
         <ul>
@@ -77,18 +115,18 @@
         <span class="pill">Rendimiento & longevidad</span>
         <span class="pill">Online o presencial</span>
       </div>
-      <div style="display:flex;gap:12px;margin-top:18px">
+      <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap">
         <a class="btn btn-primary shadow-xl" href="#contacto">Agendar por WhatsApp</a>
         <a class="btn btn-ghost" href="#videos">Ver método en 60s</a>
       </div>
       <p class="muted" style="margin-top:10px;font-size:13px">Atención a clientes. Cupos limitados por agenda.</p>
     </div>
-    <div class="hero-media card shadow-xl"></div>
+    <div class="hero-media card shadow-xl" aria-label="Imagen de entrenamiento en acción"></div>
   </section>
 
   <section id="beneficios">
     <div class="container">
-      <h2>Lo que Obtienes</h2>
+      <h2>Lo que obtienes</h2>
       <p class="muted">Diseñado para personas exigentes que valoran el tiempo, la claridad y los resultados.</p>
       <div class="grid-3" style="margin-top:20px">
         <div class="feature">
@@ -110,7 +148,7 @@
   <section id="metodo">
     <div class="container grid-2">
       <div>
-        <h2>Método Z‑FIT 180</h2>
+        <h2>Método Z-FIT 180</h2>
         <div class="accent-bar"></div>
         <p class="muted">Combinamos fuerza, cardio inteligente, movilidad y educación nutricional para lograr cambios sostenibles.</p>
         <ul class="muted">
@@ -123,8 +161,8 @@
           <a class="btn btn-primary" href="#contacto">Solicitar valoración</a>
         </div>
       </div>
-      <div class="card shadow-xl" id="videos">
-        <video controls playsinline poster="https://images.unsplash.com/photo-1514517220039-0701f04e837b?q=80&w=1400&auto=format&fit=crop">
+      <div class="card shadow-xl video-box" id="videos" aria-label="Video del método">
+        <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1514517220039-0701f04e837b?q=80&w=1400&auto=format&fit=crop">
           <source src="" type="video/mp4" />
         </video>
       </div>
@@ -136,12 +174,17 @@
       <div class="card" style="padding:22px">
         <h2>Sobre mí</h2>
         <div class="accent-bar"></div>
-        <p class="muted">"Creo firmemente que cada persona tiene el poder de transformar su vida. Mi misión es guiarte en ese camino: ayudarte a recuperar tu energía, alcanzar tu mejor versión y vivir con confianza y plenitud. A lo largo de mi trayectoria he acompañado a personas a mejorar su salud, su rendimiento y su bienestar integral, integrando nutrición, entrenamiento y un enfoque humano que conecta mente y cuerpo. Hoy quiero inspirarte a dar ese primer paso hacia tu cambio: porque tu mejor inversión siempre serás tú."</p>
+        <p class="muted">Creo firmemente que cada persona tiene el poder de transformar su vida. Mi misión es guiarte en ese camino: ayudarte a recuperar tu energía, alcanzar tu mejor versión y vivir con confianza y plenitud. He acompañado a personas a mejorar su salud, rendimiento y bienestar integral, integrando nutrición, entrenamiento y un enfoque humano.</p>
         <ul class="muted">
+          <li>Entrenamiento en TRX</li>
+          <li>HIIT (Entrenamiento interválico de alta intensidad)</li>
+          <li>Nutrición Renal</li>
+          <li>Diabetes</li>
+          <li>Nutrición Pediátrica</li>
         </ul>
       </div>
-      <div class="card shadow-xl">
-        <video controls playsinline poster="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop">
+      <div class="card shadow-xl video-box" aria-label="Video de presentación">
+        <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop">
           <source src="" type="video/mp4" />
         </video>
       </div>
@@ -158,7 +201,7 @@
           <p class="muted">Plan alimentario personalizado + rutina base de 4 semanas.</p>
           <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
         </div>
-        <div class="card" style="padding:24px; border:1px solid var(--gold)">
+        <div class="card" style="padding:24px; border:2px solid rgba(217,174,95,.35)">
           <h3>Premium</h3>
           <p class="muted">Plan clínico + recetas + entrenamiento progresivo + seguimiento semanal.</p>
           <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
@@ -178,22 +221,23 @@
         <h2>Agenda tu valoración</h2>
         <p class="muted">Cuéntanos sobre tu objetivo y agenda una llamada de 15 minutos.</p>
         <form id="leadForm" class="card" style="padding:18px" action="https://formspree.io/f/mpwlnbpa" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre completo" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="telefono" placeholder="WhatsApp" required>
-          <select name="objetivo" required>
+          <!-- Labels accesibles (aria-label) para inputs sin <label> visible -->
+          <input type="text" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
+          <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+          <input type="tel" name="telefono" placeholder="WhatsApp" aria-label="WhatsApp" required>
+          <select name="objetivo" aria-label="Tu objetivo" required>
             <option value="">Tu objetivo</option>
             <option>Pérdida de grasa</option>
             <option>Rendimiento</option>
             <option>Control de glucosa</option>
             <option>Salud general</option>
           </select>
-          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu caso"></textarea>
+          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu caso" aria-label="Mensaje"></textarea>
           <button class="btn btn-primary" type="submit">Quiero mi valoración</button>
           <p class="disclaimer">Al continuar aceptas ser contactado(a) por WhatsApp o email. Sin spam.</p>
         </form>
-        <div style="display:flex;gap:10px;margin-top:14px">
-          <a class="pill" href="https://wa.me/523313430157" target="_blank">WhatsApp inmediato</a>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <a class="pill" href="https://wa.me/523313430157" target="_blank" rel="noopener noreferrer">WhatsApp inmediato</a>
           <a class="pill" href="#planes">Ver planes</a>
         </div>
       </div>
@@ -204,7 +248,7 @@
           <li>Evaluación rápida y definición de objetivos.</li>
           <li>Inicio del plan en 48–72 h.</li>
         </ol>
-        <div class="card" style="padding:12px;margin-top:16px;background:#0f131c">
+        <div class="card" style="padding:12px;margin-top:16px;background:#0f131c;border:2px solid rgba(217,174,95,.3)">
           <strong>Atendemos CDMX/Guadalajara y online.</strong>
         </div>
       </div>
@@ -223,16 +267,18 @@
   </footer>
 
   <script>
+    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Validación mínima de formulario
     const form = document.getElementById('leadForm');
     form.addEventListener('submit', (e)=>{
       const tel = form.telefono.value.trim();
-      if(tel && !/^[0-9+\-\s]{8,}$/.test(tel)){
+      if(tel && !/^[0-9+\\-\\s]{8,}$/.test(tel)){
         e.preventDefault();
         alert('Por favor ingresa un WhatsApp válido.');
       }
     });
   </script>
-
 </body>
 </html>
