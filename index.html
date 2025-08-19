@@ -8,7 +8,7 @@
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicons actualizados -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -24,6 +24,7 @@
       color: #fff;
     }
 
+    /* ===== NAVBAR ===== */
     nav[role="navigation"] {
       display: flex;
       align-items: center;
@@ -31,6 +32,7 @@
       padding: 14px 40px;
     }
 
+    /* ===== BRAND (logo + nombre) ===== */
     .brand {
       display: flex;
       flex-direction: column;
@@ -53,10 +55,11 @@
       animation: goldGlow 3s ease-in-out infinite alternate;
     }
 
+    /* ===== BOTONES ===== */
     .btn {
-      background: #000;
+      background: #000; /* negro mate */
       color: #fff;
-      border: 2px solid #d9ae5f;
+      border: 2px solid #d9ae5f; /* borde dorado */
       padding: 10px 18px;
       font-size: 15px;
       border-radius: 8px;
@@ -70,65 +73,28 @@
       color: #000;
     }
 
+    /* ===== ANIMACIÓN SINCRONIZADA ===== */
     @keyframes goldGlow {
       0%   { filter: drop-shadow(0 0 0 rgba(217,174,95,0)); text-shadow: none; }
       50%  { filter: drop-shadow(0 0 14px rgba(217,174,95,.7));
              text-shadow: 0 0 14px rgba(217,174,95,.65); }
       100% { filter: drop-shadow(0 0 0 rgba(217,174,95,0)); text-shadow: none; }
     }
-
-    footer {
-      background: #000;
-      border-top: 2px solid #d9ae5f;
-      padding: 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: #ccc;
-      margin: 6px 0;
-    }
-
-    footer p strong {
-      color: #d9ae5f;
-    }
-
-    footer a {
-      color: #d9ae5f;
-      text-decoration: none;
-      margin: 0 8px;
-      transition: 0.3s;
-    }
-
-    footer a:hover {
-      color: #fff;
-      text-shadow: 0 0 8px #d9ae5f;
-    }
   </style>
 </head>
 <body>
   <nav role="navigation">
+    <!-- LOGO + TEXTO -->
     <div class="brand">
       <img src="logo.png" alt="NutriElite Logo">
       <strong>NutriElite</strong>
     </div>
 
+    <!-- BOTONES -->
     <div>
       <a href="https://wa.me/5213333333333?text=Hola,%20deseo%20agendar%20una%20valoración" class="btn">Agendar WhatsApp</a>
       <a href="#contacto" class="btn">Contacto</a>
     </div>
   </nav>
-
-  <footer>
-    <p><strong>NutriElite</strong> | Nutrición &amp; Entrenamiento Premium</p>
-    <p>© 2025 Todos los derechos reservados</p>
-    <p>
-      <a href="https://wa.me/5213333333333?text=Hola,%20deseo%20agendar%20una%20valoración">WhatsApp</a> |
-      <a href="https://www.facebook.com/bunnyhealty">Facebook</a> |
-      <a href="https://bunnyhealty.com">Sitio Web</a>
-    </p>
-  </footer>
 </body>
 </html>
