@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0F4C5C">
   <title>NutriElite | Nutrición &amp; Entrenamiento Premium</title>
   <meta name="description" content="NutriElite: nutrición clínica y entrenamiento inteligente para resultados medibles. Diseñado para clientes de clase media–alta."/>
-  <!-- Si tienes el archivo en /assets -->
   <!-- Favicons -->
-<link rel="icon" type="image/png" href="https://israeloayza.github.io/NutriElite/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="https://israeloayza.github.io/NutriElite/favicon.svg" />
-<link rel="shortcut icon" href="https://israeloayza.github.io/NutriElite/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="https://israeloayza.github.io/NutriElite/apple-touch-icon.png" />
-<link rel="manifest" href="https://israeloayza.github.io/NutriElite/site.webmanifest" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://israeloayza.github.io/NutriElite/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="https://israeloayza.github.io/NutriElite/favicon.svg" />
+  <link rel="shortcut icon" href="https://israeloayza.github.io/NutriElite/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://israeloayza.github.io/NutriElite/apple-touch-icon.png" />
+  <link rel="manifest" href="https://israeloayza.github.io/NutriElite/site.webmanifest" />  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0C0F13; --card:#121620; --text:#F5F7FA; --muted:#A7B0C2;
@@ -26,68 +22,63 @@
     body{background:var(--bg);color:var(--text);line-height:1.55}
     a{color:inherit;text-decoration:none}
     img,video{max-width:100%;display:block}
-    .container{width:min(1120px,92%);margin:auto}
+    .container{width:min(1120px,92%);margin:auto}/* Botones */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:14px;font-weight:700;letter-spacing:.2px;transition:.3s ease; outline: none; font-size:1.05rem}
+.btn:focus-visible{box-shadow:0 0 0 3px rgba(217,174,95,.45)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:14px;font-weight:700;letter-spacing:.2px;transition:.3s ease; outline: none; font-size:1.05rem}
 
-    /* Botones (mejora contraste y focus) */
-    .btn{display:inline-block;padding:14px 22px;border-radius:14px;font-weight:700;letter-spacing:.2px;transition:.2s ease; outline: none;}
-    .btn:focus-visible{box-shadow:0 0 0 3px rgba(217,174,95,.45)}
-    /* Si quieres texto dorado sobre azul petróleo, déjalo así; si prefieres más contraste, cambia color:#0b0f14 o #ffffff */
-    .btn-primary{background:var(--petrol);color:var(--gold);border:1px solid rgba(217,174,95,.35)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.35)}
-    .btn-ghost{border:1px solid #2a2f3c;color:var(--text);backdrop-filter: blur(6px);}
-    .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)}
-    .pill{display:inline-flex;gap:8px;align-items:center;background:#0b0f14;border:1px solid #1e2330;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}
+.btn:focus-visible{box-shadow:0 0 0 3px rgba(217,174,95,.45)} .btn-primary{background:#0b0f14;color:var(--gold);border:2px solid var(--gold);position:relative;overflow:hidden} .btn-primary:hover{background:#0b0f14;transform:translateY(-2px);box-shadow:0 0 12px rgba(217,174,95,.45),0 12px 26px rgba(0,0,0,.35);animation:glow 1.5s infinite alternate} @keyframes glow{from{box-shadow:0 0 8px rgba(217,174,95,.6),0 0 16px rgba(217,174,95,.4)}to{box-shadow:0 0 16px rgba(217,174,95,.9),0 0 32px rgba(217,174,95,.6)}} /* Brillo dorado sincronizado logo + marca */ @keyframes goldGlow{0%{filter:drop-shadow(0 0 0 rgba(217,174,95,0))}50%{filter:drop-shadow(0 0 8px rgba(217,174,95,.6))}100%{filter:drop-shadow(0 0 0 rgba(217,174,95,0))}} @keyframes goldTextGlow{0%{text-shadow:0 0 0 rgba(217,174,95,0)}50%{text-shadow:0 0 10px rgba(217,174,95,.55)}100%{text-shadow:0 0 0 rgba(217,174,95,0)}}to{box-shadow:0 0 16px rgba(217,174,95,.9),0 0 32px rgba(217,174,95,.6)}} .btn-ghost{border:1px solid #2a2f3c;color:var(--text);backdrop-filter: blur(6px)} .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)} .pill{display:inline-flex;gap:8px;align-items:center;background:#0b0f14;border:1px solid #1e2330;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}
 
-    header{position:sticky;top:0;z-index:40;background:rgba(12,15,19,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
-    nav[role="navigation"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-    nav a:hover{opacity:.85}
+header{position:sticky;top:0;z-index:40;background:rgba(12,15,19,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
+nav[role="navigation"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 
-    /* HERO */
-    .hero{padding:84px 0 48px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
-    .hero h1{font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
-    .hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
-    .card{background:var(--card);border:1px solid #222636;border-radius:20px}
-    .hero-media{position:relative;border-radius:22px;overflow:hidden; background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover; min-height:360px}
+/* Brand stack: logo arriba, texto abajo */ .brand{display:flex;flex-direction:column;align-items:center;gap:6px} .brand img{width:40px;height:40px;object-fit:contain;animation:goldGlow 2.2s ease-in-out 1 both} .brand img:hover{animation:goldGlow 1.6s ease-in-out 1 both} .brand strong{font-family:'Playfair Display','Cormorant Garamond',serif;font-weight:700;letter-spacing:.4px;font-size:18px;line-height:1;animation:goldTextGlow 2.2s ease-in-out 1 both} .brand strong:hover{animation:goldTextGlow 1.6s ease-in-out 1 both} nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0} nav a:hover{opacity:.85}
 
-    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .accent-bar{width:64px;height:6px;background:linear-gradient(90deg,var(--gold),var(--petrol));border-radius:999px;margin:10px 0}
+/* HERO */
+.hero{padding:84px 0 48px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero h1{font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
+.hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
+.card{background:var(--card);border:1px solid #222636;border-radius:20px}
+.hero-media{position:relative;border-radius:22px;overflow:hidden; background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover; min-height:360px}
 
-    /* SECTIONS */
-    section{padding:64px 0}
-    h2{font-size:clamp(26px,3vw,36px);margin:0 0 14px}
-    .muted{color:var(--muted)}
+.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.accent-bar{width:64px;height:6px;background:linear-gradient(90deg,var(--gold),var(--petrol));border-radius:999px;margin:10px 0}
 
-    /* Más responsive usando auto-fit */
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+/* SECTIONS */
+section{padding:64px 0}
+h2{font-size:clamp(26px,3vw,36px);margin:0 0 14px}
+.muted{color:var(--muted)}
 
-    /* Tarjetas con borde dorado suave */
-    .feature{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.3);background:linear-gradient(180deg,#141827,#10131c)}
-    .feature h3{margin:0 0 6px;font-size:18px}
-    .feature p{margin:0;color:var(--muted)}
-    .testimonial{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.2);background:#12161f}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 
-    /* FORM */
-    form{display:grid;gap:14px}
-    input,textarea,select{background:#0e121a;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
-    input::placeholder,textarea::placeholder{color:#80869a}
-    .disclaimer{font-size:12px;color:var(--muted)}
+.feature{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.3);background:linear-gradient(180deg,#141827,#10131c)}
+.feature h3{margin:0 0 6px;font-size:18px}
+.feature p{margin:0;color:var(--muted)}
+.testimonial{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.2);background:#12161f}
 
-    /* Embeds/videos responsive (si usas iframes también) */
-    .video-box{position:relative;border-radius:20px;overflow:hidden;border:2px solid rgba(217,174,95,.3)}
-    .video-box > *{width:100%;aspect-ratio:16/9;height:auto;display:block}
+/* FORM */
+form{display:grid;gap:14px}
+input,textarea,select{background:#0b0f14;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
+input::placeholder,textarea::placeholder{color:#80869a}
 
-    /* FOOTER */ 
-    footer{padding:36px 0;border-top:1px solid #1c2130;color:var(--muted)}
+input:focus,textarea:focus,select:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(217,174,95,.15)} .disclaimer{font-size:12px;color:var(--muted)}
 
-    /* RESPONSIVE refinado */
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-      .grid-2{grid-template-columns:1fr}
-      nav ul{gap:14px;flex-wrap:wrap}
-    }
+/* Videos responsive */
+.video-box{position:relative;border-radius:20px;overflow:hidden;border:2px solid rgba(217,174,95,.3)}
+.video-box > *{width:100%;aspect-ratio:16/9;height:auto;display:block}
+
+/* FOOTER */ 
+footer{padding:36px 0;border-top:1px solid #1c2130;color:var(--muted)}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .hero{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .grid-2{grid-template-columns:1fr}
+  nav ul{gap:14px;flex-wrap:wrap}
+}
+
   </style>
 </head>
 <body>
@@ -103,13 +94,17 @@
           <li><a href="#metodo">Método</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="#videos">Videos</a></li>
-          <li><a href="#contacto" class="btn btn-primary">Agenda tu valoración</a></li>
+          <!-- Botón header -> WhatsApp con icono y mensaje -->
+          <li>
+            <a href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+              Agenda tu valoración
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
-  </header>
-
-  <section class="hero container">
+  </header>  <section class="hero container">
     <div>
       <span class="pill">Premium · Personalizado · Basado en evidencia</span>
       <h1>Nutrición &amp; Entrenamiento Premium</h1>
@@ -122,15 +117,17 @@
         <span class="pill">Online o presencial</span>
       </div>
       <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap">
-        <a class="btn btn-primary shadow-xl" href="#contacto">Agendar por WhatsApp</a>
+        <!-- Botón hero -> WhatsApp con icono y mensaje -->
+        <a class="btn btn-primary shadow-xl" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+          Agendar por WhatsApp
+        </a>
         <a class="btn btn-ghost" href="#videos">Ver método en 60s</a>
       </div>
       <p class="muted" style="margin-top:10px;font-size:13px">Atención a clientes. Cupos limitados por agenda.</p>
     </div>
     <div class="hero-media card shadow-xl" aria-label="Imagen de entrenamiento en acción"></div>
-  </section>
-
-  <section id="beneficios">
+  </section>  <section id="beneficios">
     <div class="container">
       <h2>Lo que obtienes</h2>
       <p class="muted">Diseñado para personas exigentes que valoran el tiempo, la claridad y los resultados.</p>
@@ -149,9 +146,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="metodo">
+  </section>  <section id="metodo">
     <div class="container grid-2">
       <div>
         <h2>Método Z-FIT 180</h2>
@@ -173,9 +168,7 @@
         </video>
       </div>
     </div>
-  </section>
-
-  <section id="sobre-mi">
+  </section>  <section id="sobre-mi">
     <div class="container grid-2">
       <div class="card" style="padding:22px">
         <h2>Sobre mí</h2>
@@ -195,9 +188,7 @@
         </video>
       </div>
     </div>
-  </section>
-
-  <section id="planes">
+  </section>  <section id="planes">
     <div class="container">
       <h2>Planes</h2>
       <p class="muted">Opciones flexibles según tus objetivos. Solicita una propuesta personalizada.</p>
@@ -219,15 +210,12 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="contacto">
+  </section>  <section id="contacto">
     <div class="container grid-2">
       <div>
         <h2>Agenda tu valoración</h2>
         <p class="muted">Cuéntanos sobre tu objetivo y agenda una llamada de 15 minutos.</p>
         <form id="leadForm" class="card" style="padding:18px" action="https://formspree.io/f/mpwlnbpa" method="POST">
-          <!-- Labels accesibles (aria-label) para inputs sin <label> visible -->
           <input type="text" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
           <input type="email" name="email" placeholder="Email" aria-label="Email" required>
           <input type="tel" name="telefono" placeholder="WhatsApp" aria-label="WhatsApp" required>
@@ -242,12 +230,22 @@
           <button class="btn btn-primary" type="submit">Quiero mi valoración</button>
           <p class="disclaimer">Al continuar aceptas ser contactado(a) por WhatsApp o email. Sin spam.</p>
         </form>
-        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-          <a class="pill" href="https://wa.me/523313430157" target="_blank" rel="noopener noreferrer">WhatsApp inmediato</a>
-          <a class="pill" href="#planes">Ver planes</a>
-        </div>
-      </div>
-      <div class="card" style="padding:22px">
+        <!-- Opción A: Un solo botón principal (ACTIVA) -->
+<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+  <a class="btn btn-primary" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+    WhatsApp inmediato
+  </a>
+</div><!-- Opción B: Dos botones (PRINCIPAL + SECUNDARIO). Descomenta este bloque y elimina el de arriba si prefieres dos opciones. --><!--
+<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+  <a class="btn btn-primary" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+    WhatsApp inmediato
+  </a>
+  <a class="btn btn-ghost" href="#planes">Ver planes</a>
+</div>
+--></div>
+<div class="card" style="padding:22px">
         <h3 style="margin-top:0">¿Qué pasa después?</h3>
         <ol class="muted">
           <li>Te escribimos para coordinar la llamada.</li>
@@ -259,9 +257,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
       <div>© <span id="year"></span> NutriElite — Todos los derechos reservados</div>
       <div style="display:flex;gap:16px">
@@ -270,9 +266,7 @@
         <a href="#" title="YouTube">YouTube</a>
       </div>
     </div>
-  </footer>
-
-  <script>
+  </footer>  <script>
     // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -280,11 +274,10 @@
     const form = document.getElementById('leadForm');
     form.addEventListener('submit', (e)=>{
       const tel = form.telefono.value.trim();
-      if(tel && !/^[0-9+\\-\\s]{8,}$/.test(tel)){
+      if(tel && !/^[0-9+\-\s]{8,}$/.test(tel)){
         e.preventDefault();
         alert('Por favor ingresa un WhatsApp válido.');
       }
     });
-  </script>
-</body>
+  </script></body>
 </html>
