@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0F4C5C">
-  <title>NutriElite | Nutrición & Entrenamiento Premium</title>
+  <meta name="theme-color" content="#0F4C5C" />
+  <title>NutriElite | Nutrición &amp; Entrenamiento Premium</title>
   <meta name="description" content="NutriElite: nutrición clínica y entrenamiento inteligente para resultados medibles. Diseñado para clientes de clase media–alta."/>
 
-  <!-- Favicons locales -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- Favicons (rutas relativas para GitHub Pages / subcarpetas) -->
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Elit" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="manifest" href="./site.webmanifest" />
 
   <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
@@ -48,7 +48,6 @@
     .brand{display:flex;flex-direction:column;align-items:center;gap:6px}
     .brand img{width:48px;height:48px;object-fit:contain;animation:goldPulse 3s ease-in-out infinite alternate}
     .brand strong{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.4px;font-size:20px;line-height:1;animation:goldPulse 3s ease-in-out infinite alternate}
-
     @keyframes goldPulse{
       0%{filter:drop-shadow(0 0 0 rgba(217,174,95,0)); text-shadow:none}
       50%{filter:drop-shadow(0 0 14px rgba(217,174,95,.7)); text-shadow:0 0 14px rgba(217,174,95,.65)}
@@ -63,7 +62,7 @@
     .hero h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
     .hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
     .card{background:var(--card);border:1px solid #222636;border-radius:20px}
-    .hero-media{position:relative;border-radius:22px;overflow:hidden; background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover; min-height:360px}
+    .hero-media{position:relative;border-radius:22px;overflow:hidden;background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover;min-height:360px}
 
     .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
     .accent-bar{width:64px;height:6px;background:linear-gradient(90deg,var(--gold),var(--petrol));border-radius:999px;margin:10px 0}
@@ -113,8 +112,8 @@
     <div class="container">
       <nav role="navigation" aria-label="Principal">
         <div class="brand">
-          <!-- Cambia logo.png por la ruta real de tu logo -->
-          <img src="logo.png" alt="NutriElite Logo">
+          <!-- Cambia ./logo.png por tu ruta real; fallback al apple-touch-icon si no está -->
+          <img src="./logo.png" alt="NutriElite Logo" onerror="this.onerror=null;this.src='./apple-touch-icon.png';">
           <strong>NutriElite</strong>
         </div>
         <ul>
@@ -122,12 +121,9 @@
           <li><a href="#metodo">Método</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="#videos">Videos</a></li>
-          <!-- Botón header -> WhatsApp con icono y mensaje -->
           <li>
-            <a href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n"
-               target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt=""
-                   style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+            <a href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
               Agenda tu valoración
             </a>
           </li>
@@ -149,12 +145,8 @@
         <span class="pill">Online o presencial</span>
       </div>
       <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap">
-        <!-- Botón hero -> WhatsApp con icono y mensaje -->
-        <a class="btn btn-primary shadow-xl"
-           href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n"
-           target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt=""
-               style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
+        <a class="btn btn-primary shadow-xl" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
           Agendar por WhatsApp
         </a>
         <a class="btn btn-ghost" href="#videos">Ver método en 60s</a>
@@ -203,129 +195,4 @@
       </div>
       <div class="card shadow-xl video-box" id="videos" aria-label="Video del método">
         <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1514517220039-0701f04e837b?q=80&w=1400&auto=format&fit=crop">
-          <source src="" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre-mi">
-    <div class="container grid-2">
-      <div class="card" style="padding:22px">
-        <h2>Sobre mí</h2>
-        <div class="accent-bar"></div>
-        <p class="muted">Creo firmemente que cada persona tiene el poder de transformar su vida. Mi misión es guiarte en ese camino: ayudarte a recuperar tu energía, alcanzar tu mejor versión y vivir con confianza y plenitud. He acompañado a personas a mejorar su salud, rendimiento y bienestar integral, integrando nutrición, entrenamiento y un enfoque humano.</p>
-        <ul class="muted">
-          <li>Entrenamiento en TRX</li>
-          <li>HIIT (Entrenamiento interválico de alta intensidad)</li>
-          <li>Nutrición Renal</li>
-          <li>Diabetes</li>
-          <li>Nutrición Pediátrica</li>
-        </ul>
-      </div>
-      <div class="card shadow-xl video-box" aria-label="Video de presentación">
-        <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop">
-          <source src="" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
-
-  <section id="planes">
-    <div class="container">
-      <h2>Planes</h2>
-      <p class="muted">Opciones flexibles según tus objetivos. Solicita una propuesta personalizada.</p>
-      <div class="grid-3" style="margin-top:16px">
-        <div class="card" style="padding:24px">
-          <h3>Start</h3>
-          <p class="muted">Plan alimentario personalizado + rutina base de 4 semanas.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
-        </div>
-        <div class="card" style="padding:24px; border:2px solid rgba(217,174,95,.35)">
-          <h3>Premium</h3>
-          <p class="muted">Plan clínico + recetas + entrenamiento progresivo + seguimiento semanal.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
-        </div>
-        <div class="card" style="padding:24px">
-          <h3>Elite</h3>
-          <p class="muted">Todo lo anterior + sesiones 1:1 y reportes para tu médico.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <div class="container grid-2">
-      <div>
-        <h2>Agenda tu valoración</h2>
-        <p class="muted">Cuéntanos sobre tu objetivo y agenda una llamada de 15 minutos.</p>
-        <form id="leadForm" class="card" style="padding:18px" action="https://formspree.io/f/mpwlnbpa" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
-          <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-          <input type="tel" name="telefono" placeholder="WhatsApp" aria-label="WhatsApp" required>
-          <select name="objetivo" aria-label="Tu objetivo" required>
-            <option value="">Tu objetivo</option>
-            <option>Pérdida de grasa</option>
-            <option>Rendimiento</option>
-            <option>Control de glucosa</option>
-            <option>Salud general</option>
-          </select>
-          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu caso" aria-label="Mensaje"></textarea>
-          <button class="btn btn-primary" type="submit">Quiero mi valoración</button>
-          <p class="disclaimer">Al continuar aceptas ser contactado(a) por WhatsApp o email. Sin spam.</p>
-        </form>
-
-        <!-- Botón WhatsApp (contacto) -->
-        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-          <a class="btn btn-primary"
-             href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n"
-             target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt=""
-                 style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
-            WhatsApp inmediato
-          </a>
-        </div>
-      </div>
-
-      <div class="card" style="padding:22px">
-        <h3 style="margin-top:0">¿Qué pasa después?</h3>
-        <ol class="muted">
-          <li>Te escribimos para coordinar la llamada.</li>
-          <li>Evaluación rápida y definición de objetivos.</li>
-          <li>Inicio del plan en 48–72 h.</li>
-        </ol>
-        <div class="card" style="padding:12px;margin-top:16px;background:#0f131c;border:2px solid rgba(217,174,95,.3)">
-          <strong>Atendemos CDMX/Guadalajara y online.</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
-      <div>© <span id="year"></span> NutriElite — Todos los derechos reservados</div>
-      <div style="display:flex;gap:16px">
-        <a href="#" title="Instagram">Instagram</a>
-        <a href="#" title="Facebook">Facebook</a>
-        <a href="#" title="YouTube">YouTube</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Validación mínima de formulario
-    const form = document.getElementById('leadForm');
-    form.addEventListener('submit', (e)=>{
-      const tel = form.telefono.value.trim();
-      if(tel && !/^[0-9+\-\s]{8,}$/.test(tel)){
-        e.preventDefault();
-        alert('Por favor ingresa un WhatsApp válido.');
-      }
-    });
-  </script>
-</body>
-</html>
+          <
