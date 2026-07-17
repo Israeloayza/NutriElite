@@ -1,332 +1,1343 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0F4C5C" />
-  <title>NutriElite | Nutrición &amp; Entrenamiento Premium</title>
-  <meta name="description" content="NutriElite: nutrición clínica y entrenamiento inteligente para resultados medibles. Diseñado para clientes de clase media–alta." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0F4C5C">
 
-  <!-- Favicons (rutas relativas para funcionar en subcarpetas) -->
-  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Elit" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <title>Nutriólogo Israel Loayza | Consulta nutricional en Tlajomulco</title>
+  <meta name="description" content="Consulta nutricional personalizada con Israel Loayza en Tlajomulco Centro. Evaluación, estrategia alimentaria y seguimiento. Consulta inicial $800 MXN.">
+  <link rel="canonical" href="https://israeloayza.github.io/NutriElite/">
+  <link rel="preload" as="image" href="./assets/images/hero-nutricion.jpg" fetchpriority="high">
 
-  <!-- Tipografías -->
+  <!-- Open Graph: mejora la vista al compartir por WhatsApp y redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Nutriólogo Israel Loayza en Tlajomulco">
+  <meta property="og:description" content="Consulta nutricional personalizada, evaluación y seguimiento. Consulta inicial $800 MXN.">
+  <meta property="og:url" content="https://israeloayza.github.io/NutriElite/">
+  <meta property="og:image" content="https://israeloayza.github.io/NutriElite/apple-touch-icon.png">
+
+  <!-- Favicons existentes en el repositorio -->
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="NutriElite">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Tipografías originales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
+  <!--
+    GOOGLE ADS / ANALYTICS
+    Cuando Google te entregue tu ID, pega aquí el código de Google Tag.
+    No publiques un ID inventado.
+  -->
+
+  <!-- Datos estructurados para buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["ProfessionalService", "MedicalBusiness"],
+    "name": "Nutriólogo Israel Loayza",
+    "alternateName": "NutriElite",
+    "url": "https://israeloayza.github.io/NutriElite/",
+    "telephone": "+52 33 1343 0157",
+    "priceRange": "$$",
+    "image": "https://israeloayza.github.io/NutriElite/apple-touch-icon.png",
+    "description": "Consulta nutricional personalizada, evaluación, estrategia alimentaria y seguimiento en Tlajomulco Centro.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. Juárez Eje Sur 81",
+      "addressLocality": "Tlajomulco de Zúñiga",
+      "addressRegion": "Jalisco",
+      "postalCode": "45640",
+      "addressCountry": "MX"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Tlajomulco de Zúñiga"
+    },
+    "sameAs": [
+      "https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac"
+    ]
+  }
+  </script>
+
   <style>
     :root{
-      --bg:#0C0F13; --card:#121620; --text:#F5F7FA; --muted:#A7B0C2;
-      --gold:#D9AE5F; --petrol:#0F4C5C; --accent:#5FD1B8;
+      --bg:#0C0F13;
+      --card:#121620;
+      --text:#F5F7FA;
+      --muted:#A7B0C2;
+      --gold:#D9AE5F;
+      --petrol:#0F4C5C;
+      --accent:#5FD1B8;
+      --line:#222636;
+      --danger:#ff8585;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
-    body{background:var(--bg);color:var(--text);line-height:1.55}
-    a{color:inherit;text-decoration:none}
-    img,video{max-width:100%;display:block}
-    .container{width:min(1120px,92%);margin:auto}
 
-    /* Botones */
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:16px 26px;border-radius:14px;font-weight:700;
-      letter-spacing:.2px;transition:.3s ease;outline:none;font-size:1.05rem
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{
+      margin:0;
+      min-height:100%;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
     }
-    .btn:focus-visible{box-shadow:0 0 0 3px rgba(217,174,95,.45)}
+    body{background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img,video,iframe{max-width:100%;display:block}
+    button,input,textarea,select{font:inherit}
+    section{scroll-margin-top:110px;padding:68px 0}
+    h1,h2{font-family:"Playfair Display",serif}
+    h1{font-size:clamp(36px,5vw,58px);line-height:1.06;margin:14px 0}
+    h2{font-size:clamp(28px,3vw,40px);line-height:1.15;margin:0 0 14px}
+    h3{margin-top:0}
+    p{margin-top:0}
+    .container{width:min(1120px,92%);margin:auto}
+    .muted{color:var(--muted)}
+    .gold{color:var(--gold)}
+    .center{text-align:center}
+    .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:20px;
+    }
+    .accent-bar{
+      width:64px;height:6px;
+      background:linear-gradient(90deg,var(--gold),var(--petrol));
+      border-radius:999px;
+      margin:10px 0 18px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#0b0f14;
+      border:1px solid #1e2330;
+      color:var(--muted);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:12px;
+    }
+    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .stack{display:grid;gap:14px}
+    .section-heading{max-width:720px;margin-bottom:26px}
+
+    /* Botones originales con mejoras de accesibilidad */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:14px 24px;
+      border-radius:14px;
+      border:0;
+      font-weight:700;
+      letter-spacing:.2px;
+      transition:.25s ease;
+      cursor:pointer;
+      font-size:1rem;
+    }
+    .btn:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(217,174,95,.45)}
     .btn-primary{
-      background:#0b0f14;color:var(--gold);
-      border:2px solid var(--gold);position:relative;overflow:hidden
+      background:#0b0f14;
+      color:var(--gold);
+      border:2px solid var(--gold);
+      position:relative;
+      overflow:hidden;
     }
     .btn-primary:hover{
-      background:#0b0f14;transform:translateY(-2px);
-      box-shadow:0 0 12px rgba(217,174,95,.45),0 12px 26px rgba(0,0,0,.35);
-      animation:glow 1.5s infinite alternate
+      transform:translateY(-3px);
+      box-shadow:0 0 16px rgba(217,174,95,.48),0 14px 30px rgba(0,0,0,.38);
     }
-    @keyframes glow{
-      from{box-shadow:0 0 8px rgba(217,174,95,.6),0 0 16px rgba(217,174,95,.4)}
-      to{box-shadow:0 0 16px rgba(217,174,95,.9),0 0 32px rgba(217,174,95,.6)}
+    .btn:active{transform:translateY(1px) scale(.985)}
+    .card,.feature{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .card:hover,.feature:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 34px rgba(0,0,0,.28);
+      border-color:rgba(217,174,95,.38);
     }
-    .btn-ghost{border:1px solid #2a2f3c;color:var(--text);backdrop-filter: blur(6px)}
-    .shadow-xl{box-shadow:0 15px 40px rgba(0,0,0,.35)}
-    .pill{display:inline-flex;gap:8px;align-items:center;background:#0b0f14;border:1px solid #1e2330;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:12px}
+    .btn-ghost{border:1px solid #2a2f3c;color:var(--text);background:transparent}
+    .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+    .btn-small{min-height:44px;padding:10px 16px;font-size:.92rem}
+    .button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .whatsapp-icon{width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%)}
 
-    /* Header / Nav */
-    header{position:sticky;top:0;z-index:40;background:rgba(12,15,19,.85);backdrop-filter:blur(10px);border-bottom:1px solid #1c2130}
-    nav[role="navigation"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-    nav a:hover{opacity:.85}
-
-    /* Brand: logo arriba, texto abajo, brillo sincronizado constante */
-    .brand{display:flex;flex-direction:column;align-items:center;gap:6px}
-    .brand img{width:48px;height:48px;object-fit:contain;animation:goldPulse 3s ease-in-out infinite alternate}
-    .brand strong{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.4px;font-size:20px;line-height:1;animation:goldPulse 3s ease-in-out infinite alternate}
+    /* Encabezado */
+    header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:rgba(12,15,19,.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #1c2130;
+    }
+    nav[aria-label="Principal"]{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:max-content;
+    }
+    .brand img{
+      width:50px;
+      height:50px;
+      object-fit:contain;
+      animation:goldPulse 3s ease-in-out infinite alternate;
+    }
+    .brand-copy{display:flex;flex-direction:column}
+    .brand strong{
+      font-family:"Playfair Display",serif;
+      color:var(--gold);
+      letter-spacing:.4px;
+      font-size:21px;
+      line-height:1;
+      animation:goldPulse 3s ease-in-out infinite alternate;
+    }
+    .brand small{color:var(--muted);font-size:11px;margin-top:5px}
     @keyframes goldPulse{
-      0%{filter:drop-shadow(0 0 0 rgba(217,174,95,0)); text-shadow:none}
-      50%{filter:drop-shadow(0 0 14px rgba(217,174,95,.7)); text-shadow:0 0 14px rgba(217,174,95,.65)}
-      100%{filter:drop-shadow(0 0 0 rgba(217,174,95,0)); text-shadow:none}
+      0%{filter:drop-shadow(0 0 0 rgba(217,174,95,0));text-shadow:none}
+      50%{filter:drop-shadow(0 0 14px rgba(217,174,95,.7));text-shadow:0 0 14px rgba(217,174,95,.65)}
+      100%{filter:drop-shadow(0 0 0 rgba(217,174,95,0));text-shadow:none}
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .nav-links a:not(.btn):hover{color:var(--gold)}
+
+
+    /* Menú principal y submenús */
+    .menu-panel{display:flex;align-items:center}
+    .menu-toggle{
+      display:none;
+      width:46px;
+      height:46px;
+      padding:10px;
+      border-radius:12px;
+      border:1px solid #2a2f3c;
+      background:#0b0f14;
+      cursor:pointer;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:5px;
+      transition:.25s ease;
+    }
+    .menu-toggle:hover{
+      border-color:var(--gold);
+      box-shadow:0 0 14px rgba(217,174,95,.22);
+    }
+    .menu-toggle span{
+      display:block;
+      width:22px;
+      height:2px;
+      border-radius:999px;
+      background:var(--gold);
+      transition:.25s ease;
+    }
+    .menu-toggle.is-open span:nth-child(1){
+      transform:translateY(7px) rotate(45deg);
+    }
+    .menu-toggle.is-open span:nth-child(2){
+      opacity:0;
+    }
+    .menu-toggle.is-open span:nth-child(3){
+      transform:translateY(-7px) rotate(-45deg);
     }
 
-    /* HERO */
-    .hero{padding:84px 0 48px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
-    .hero h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(32px,4vw,48px);line-height:1.1;margin:0}
-    .hero p{color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
-    .card{background:var(--card);border:1px solid #222636;border-radius:20px}
-    .hero-media{position:relative;border-radius:22px;overflow:hidden;background:url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop') center/cover;min-height:360px}
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .nav-links > li{position:relative}
+    .nav-links a,
+    .submenu-toggle{
+      color:var(--text);
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      padding:12px 13px;
+      border-radius:10px;
+      transition:.22s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      white-space:nowrap;
+    }
+    .nav-links a:not(.btn):hover,
+    .submenu-toggle:hover,
+    .submenu-toggle[aria-expanded="true"]{
+      color:var(--gold);
+      background:rgba(217,174,95,.06);
+    }
+    .submenu-toggle span{
+      font-size:13px;
+      transition:transform .22s ease;
+    }
+    .submenu-toggle[aria-expanded="true"] span{
+      transform:rotate(180deg);
+    }
 
-    .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .accent-bar{width:64px;height:6px;background:linear-gradient(90deg,var(--gold),var(--petrol));border-radius:999px;margin:10px 0}
+    .submenu{
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      min-width:235px;
+      margin:0;
+      padding:10px;
+      list-style:none;
+      background:rgba(10,13,18,.98);
+      border:1px solid rgba(217,174,95,.22);
+      border-radius:16px;
+      box-shadow:0 18px 40px rgba(0,0,0,.45);
+      backdrop-filter:blur(12px);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(-8px);
+      pointer-events:none;
+      transition:.22s ease;
+      z-index:60;
+    }
+    .has-submenu:hover > .submenu,
+    .has-submenu:focus-within > .submenu,
+    .has-submenu.is-open > .submenu{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+    .submenu li + li{margin-top:4px}
+    .submenu a{
+      width:100%;
+      padding:11px 12px;
+      color:var(--muted);
+      justify-content:flex-start;
+    }
+    .submenu a:hover{
+      color:var(--gold)!important;
+      background:rgba(217,174,95,.08)!important;
+      transform:translateX(3px);
+    }
+    .nav-links a.is-active{
+      color:var(--gold);
+      background:rgba(217,174,95,.08);
+    }
+    .nav-cta{margin-left:6px}
+    .nav-cta .btn{padding-inline:18px}
 
-    /* SECTIONS */
-    section{padding:64px 0}
-    h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(26px,3vw,36px);margin:0 0 14px}
-    .muted{color:var(--muted)}
+    @media (max-width: 1050px){
+      nav[aria-label="Principal"]{
+        min-height:78px;
+      }
+      .menu-toggle{display:flex}
+      .menu-panel{
+        position:absolute;
+        top:calc(100% + 1px);
+        left:0;
+        right:0;
+        display:block;
+        max-height:0;
+        overflow:hidden;
+        background:rgba(12,15,19,.98);
+        border-bottom:1px solid #1c2130;
+        box-shadow:0 18px 35px rgba(0,0,0,.38);
+        transition:max-height .3s ease;
+      }
+      .menu-panel.is-open{
+        max-height:78vh;
+        overflow-y:auto;
+      }
+      .nav-links{
+        width:min(1120px,92%);
+        margin:0 auto;
+        padding:14px 0 20px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:4px;
+      }
+      .nav-links > li{width:100%}
+      .nav-links a,
+      .submenu-toggle{
+        width:100%;
+        justify-content:space-between;
+        padding:14px 15px;
+      }
+      .submenu{
+        position:static;
+        min-width:0;
+        max-height:0;
+        overflow:hidden;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        pointer-events:auto;
+        padding:0 8px;
+        border:0;
+        box-shadow:none;
+        background:rgba(255,255,255,.018);
+        border-radius:12px;
+        transition:max-height .25s ease,padding .25s ease;
+      }
+      .has-submenu.is-open > .submenu{
+        max-height:260px;
+        padding:8px;
+      }
+      .submenu a{
+        padding:11px 14px 11px 24px;
+        font-size:.95rem;
+      }
+      .nav-cta{
+        margin-left:0;
+        padding-top:8px;
+      }
+      .nav-cta .btn{
+        justify-content:center;
+      }
+    }
 
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    @media (max-width: 580px){
+      .menu-panel.is-open{max-height:82vh}
+      .brand-copy small{display:none}
+    }
 
-    .feature{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.3);background:linear-gradient(180deg,#141827,#10131c)}
-    .feature h3{margin:0 0 6px;font-size:18px}
-    .feature p{margin:0;color:var(--muted)}
-    .testimonial{padding:22px;border-radius:18px;border:2px solid rgba(217,174,95,.2);background:#12161f}
+    /* Hero */
+    .hero{
+      padding:86px 0 56px;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:38px;
+      align-items:center;
+    }
+    .hero p{color:var(--muted);font-size:clamp(16px,1.5vw,19px);max-width:680px}
+    .hero-media{
+      position:relative;
+      min-height:430px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg,rgba(12,15,19,.05),rgba(12,15,19,.68)),
+        url("./assets/images/hero-nutricion.jpg") center/cover;
+    }
+    .hero-badge{
+      position:absolute;
+      left:20px;
+      right:20px;
+      bottom:20px;
+      padding:18px;
+      background:rgba(12,15,19,.88);
+      border:1px solid rgba(217,174,95,.45);
+      border-radius:16px;
+      backdrop-filter:blur(8px);
+    }
+    .hero-badge strong{display:block;color:var(--gold);font-size:1.15rem}
+    .hero-badge span{color:var(--muted);font-size:.92rem}
+    .price-line{
+      display:flex;
+      align-items:flex-end;
+      gap:10px;
+      margin:18px 0 4px;
+    }
+    .price{font-family:"Playfair Display",serif;color:var(--gold);font-size:42px;line-height:1}
+    .price-note{color:var(--muted);padding-bottom:4px}
+    .price-summary{
+      display:inline-flex;
+      flex-direction:column;
+      gap:2px;
+      margin-top:16px;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid rgba(217,174,95,.28);
+      background:linear-gradient(180deg,rgba(217,174,95,.08),rgba(15,76,92,.08));
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    .price-summary strong{color:var(--gold);font-size:.98rem}
+    .price-summary span{color:var(--muted);font-size:.82rem}
 
-    /* FORM */
+    /* Características y servicios */
+    .feature{
+      padding:24px;
+      border-radius:18px;
+      border:2px solid rgba(217,174,95,.28);
+      background:linear-gradient(180deg,#141827,#10131c);
+    }
+    .feature h3{margin-bottom:7px}
+    .feature p{color:var(--muted);margin-bottom:0}
+    .service-card{padding:25px;display:flex;flex-direction:column}
+    .service-card.highlight{border:2px solid rgba(217,174,95,.48)}
+    .service-card .service-price{
+      color:var(--gold);
+      font-family:"Playfair Display",serif;
+      font-size:32px;
+      margin:4px 0 10px;
+    }
+    .service-card ul{color:var(--muted);padding-left:20px}
+    .service-card .btn{margin-top:auto}
+
+    /* Método y perfil */
+    .check-list{padding:0;margin:20px 0;list-style:none;display:grid;gap:12px}
+    .check-list li{color:var(--muted);padding-left:31px;position:relative}
+    .check-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:-1px;
+      color:var(--gold);
+      font-weight:700;
+      font-size:19px;
+    }
+    .profile-panel{padding:26px}
+    .profile-image{
+      min-height:410px;
+      background:
+        linear-gradient(180deg,rgba(12,15,19,.06),rgba(12,15,19,.55)),
+        url("./assets/images/entrenamiento-nutrielite.jpg") center/cover;
+    }
+
+    /* Ubicación */
+    .map{
+      width:100%;
+      min-height:390px;
+      border:0;
+      border-radius:20px;
+    }
+    .location-card{padding:26px}
+    address{font-style:normal;color:var(--muted)}
+    .contact-detail{display:flex;gap:10px;align-items:flex-start;margin:12px 0}
+    .contact-detail strong{color:var(--text)}
+
+    /* Formulario */
     form{display:grid;gap:14px}
-    input,textarea,select{background:#0b0f14;border:1px solid #2a2f3a;border-radius:12px;color:var(--text);padding:12px 14px;font:inherit}
+    label{font-weight:600;font-size:.92rem}
+    input,textarea,select{
+      width:100%;
+      background:#0b0f14;
+      border:1px solid #2a2f3a;
+      border-radius:12px;
+      color:var(--text);
+      padding:13px 14px;
+    }
     input::placeholder,textarea::placeholder{color:#80869a}
-    input:focus,textarea:focus,select:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(217,174,95,.15)}
+    input:focus,textarea:focus,select:focus{
+      border-color:var(--gold);
+      outline:none;
+      box-shadow:0 0 0 3px rgba(217,174,95,.15);
+    }
+    .form-card{padding:24px}
+    .form-status{display:none;padding:12px;border-radius:10px;background:rgba(95,209,184,.12);color:var(--accent)}
     .disclaimer{font-size:12px;color:var(--muted)}
+    .checkbox-row{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px}
+    .checkbox-row input{width:auto;margin-top:4px}
+    details{
+      background:#0f131c;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+    }
+    summary{cursor:pointer;color:var(--gold);font-weight:700}
 
-    /* Videos responsive */
-    .video-box{position:relative;border-radius:20px;overflow:hidden;border:2px solid rgba(217,174,95,.3)}
-    .video-box > *{width:100%;aspect-ratio:16/9;height:auto;display:block}
+    /* CTA móvil */
+    .mobile-cta{
+      display:none;
+      position:fixed;
+      left:12px;
+      right:12px;
+      bottom:12px;
+      z-index:50;
+    }
+    .mobile-cta .btn{width:100%;background:#0b0f14}
 
-    /* FOOTER minimalista */
-    footer{background:#000;border-top:2px solid var(--gold);padding:20px;text-align:center;margin-top:60px;color:#ccc}
-    footer p{font-size:14px;margin:6px 0}
-    footer p strong{color:var(--gold)}
-    footer a{color:var(--gold);text-decoration:none;margin:0 8px;transition:.3s}
+    footer{
+      background:#000;
+      border-top:2px solid var(--gold);
+      padding:28px 0;
+      margin-top:60px;
+      color:#ccc;
+    }
+    footer a{color:var(--gold)}
     footer a:hover{color:#fff;text-shadow:0 0 8px var(--gold)}
 
-    /* RESPONSIVE */
     @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
+      .hero,.grid-2{grid-template-columns:1fr}
       .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-      .grid-2{grid-template-columns:1fr}
-      nav ul{gap:14px;flex-wrap:wrap}
+      .nav-links li:not(:last-child){display:none}
+      .hero{padding-top:54px}
+      .hero-media{min-height:350px}
+      .mobile-cta{display:block}
+      body{padding-bottom:82px}
     }
+
+    @media (max-width: 580px){
+      section{padding:54px 0}
+      .brand small{display:none}
+      .brand strong{font-size:18px}
+      .nav-links .btn{padding:9px 12px;min-height:42px;font-size:.84rem}
+      .price{font-size:36px}
+      .button-row .btn{width:100%}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
+  
+    @media (max-width: 580px){
+      .hero-badge{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:15px;
+      }
+      .hero-badge strong{
+        font-size:1.02rem;
+        line-height:1.3;
+      }
+      .hero-badge span{
+        display:block;
+        margin-top:5px;
+        line-height:1.45;
+      }
+    }
+
   </style>
 </head>
+
 <body>
   <header>
     <div class="container">
-      <nav role="navigation" aria-label="Principal">
-        <div class="brand">
-          <!-- Cambia ./logo.png por tu ruta real; fallback al apple-touch-icon si no está -->
-          <img src="./logo.png" alt="NutriElite Logo" onerror="this.onerror=null;this.src='./apple-touch-icon.png';">
-          <strong>NutriElite</strong>
+      <nav aria-label="Principal">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <img src="./apple-touch-icon.png" alt="Logotipo NutriElite">
+          <span class="brand-copy">
+            <strong>NutriElite</strong>
+            <small>Método de Israel Loayza</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mainMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="menu-panel" id="mainMenu">
+          <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li class="has-submenu">
+              <button class="submenu-toggle"
+                      type="button"
+                      aria-expanded="false">
+                Consulta
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="submenu">
+                <li><a href="#consulta">Consulta inicial</a></li>
+                <li><a href="#preparacion">Antes de tu cita</a></li>
+                <li><a href="#contacto">Solicitar consulta</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <button class="submenu-toggle"
+                      type="button"
+                      aria-expanded="false">
+                Método NutriElite
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="submenu">
+                <li><a href="#metodo">Cómo funciona</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#consulta">Programas</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <button class="submenu-toggle"
+                      type="button"
+                      aria-expanded="false">
+                Israel Loayza
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="submenu">
+                <li><a href="#sobre-mi">Perfil profesional</a></li>
+                <li><a href="#ubicacion">Consultorio</a></li>
+                <li><a href="#ubicacion">Cómo llegar</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <button class="submenu-toggle"
+                      type="button"
+                      aria-expanded="false">
+                Ayuda
+                <span aria-hidden="true">⌄</span>
+              </button>
+              <ul class="submenu">
+                <li><a href="#contacto">Preguntas frecuentes</a></li>
+                <li><a href="#privacidad">Privacidad</a></li>
+                <li><a href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac"
+                       target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-cta">
+              <a class="btn btn-primary btn-small booking-link"
+                 href="#"
+                 data-booking>
+                Agendar
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#metodo">Método</a></li>
-          <li><a href="#planes">Planes</a></li>
-          <li><a href="#videos">Videos</a></li>
-          <li>
-            <a href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
-              Agenda tu valoración
-            </a>
-          </li>
-        </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero container">
-    <div>
-      <span class="pill">Premium · Personalizado · Basado en evidencia</span>
-      <h1>Nutrición &amp; Entrenamiento Premium</h1>
-      <div class="accent-bar"></div>
-      <p>Para mujeres y hombres ocupados que buscan resultados medibles sin soluciones mágicas. Protocolos claros, seguimiento real y una experiencia a la altura de tu estilo de vida.</p>
-      <div class="tag-row">
-        <span class="pill">Planes de Alimentación Personalizados</span>
-        <span class="pill">Pérdida de grasa</span>
-        <span class="pill">Rendimiento & longevidad</span>
-        <span class="pill">Online o presencial</span>
-      </div>
-      <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap">
-        <a class="btn btn-primary shadow-xl" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
-          Agendar por WhatsApp
-        </a>
-        <a class="btn btn-ghost" href="#videos">Ver método en 60s</a>
-      </div>
-      <p class="muted" style="margin-top:10px;font-size:13px">Atención a clientes. Cupos limitados por agenda.</p>
-    </div>
-    <div class="hero-media card shadow-xl" aria-label="Imagen de entrenamiento en acción"></div>
-  </section>
-
-  <section id="beneficios">
-    <div class="container">
-      <h2>Lo que obtienes</h2>
-      <p class="muted">Diseñado para personas exigentes que valoran el tiempo, la claridad y los resultados.</p>
-      <div class="grid-3" style="margin-top:20px">
-        <div class="feature">
-          <h3>Plan clínico personal</h3>
-          <p>Menús con bajo índice glucémico, carga controlada y observaciones clínicas. Adaptado a tus biomarcadores y preferencias.</p>
-        </div>
-        <div class="feature">
-          <h3>Entrenamiento eficiente</h3>
-          <p>Rutinas de 45–60 min con progresión de cargas, técnica y descansos óptimos. Sin perder horas en el gym.</p>
-        </div>
-        <div class="feature">
-          <h3>Seguimiento premium</h3>
-          <p>Revisiones semanales, ajustes finos y dashboard de progreso. Comunicación directa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="metodo">
-    <div class="container grid-2">
+  <main id="inicio">
+    <section class="hero container">
       <div>
-        <h2>Método Z-FIT 180</h2>
+        <span class="pill">Personalizado · Práctico · Con seguimiento</span>
+        <h1>Nutriólogo Israel Loayza</h1>
         <div class="accent-bar"></div>
-        <p class="muted">Combinamos fuerza, cardio inteligente, movilidad y educación nutricional para lograr cambios sostenibles.</p>
-        <ul class="muted">
-          <li>Evaluación inicial (historia clínica, hábitos, composición corporal)</li>
-          <li>Plan alimentario por tiempos de comida (SMAE) con recetas</li>
-          <li>Programa de entrenamiento por fases (hipertrofia, fuerza, condición)</li>
-          <li>Checklist de recuperación: sueño, estrés y micronutrición</li>
-        </ul>
-        <div style="margin-top:14px">
-          <a class="btn btn-primary" href="#contacto">Solicitar valoración</a>
+
+        <p>
+          Nutrición personalizada para mejorar tu salud, composición corporal y rendimiento
+          mediante el Método NutriElite: evaluación, estrategia y ajustes adaptados a tu vida.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary shadow-xl booking-link" href="#" data-booking>
+            Agendar valoración
+          </a>
+
+          <a class="btn btn-ghost" href="#consulta">Conocer qué incluye</a>
+        </div>
+
+        <div class="price-summary" aria-label="Precio y modalidad de consulta">
+          <strong>Consulta inicial · $800 MXN</strong>
+          <span>Atención con cita previa</span>
+        </div>
+
+        <div class="tag-row">
+          <span class="pill">Composición corporal</span>
+          <span class="pill">Nutrición deportiva</span>
+          <span class="pill">Mejora de hábitos</span>
+          <span class="pill">Presencial y en línea</span>
+        </div>
+
+        <p class="muted" style="margin-top:12px;font-size:13px">
+          Atención con cita previa en C. Juárez Eje Sur 81, Tlajomulco Centro.
+        </p>
+      </div>
+
+      <div class="hero-media card shadow-xl" role="img" aria-label="Alimentos frescos para una estrategia nutricional personalizada">
+        <div class="hero-badge">
+          <strong>Atención personalizada desde la primera consulta</strong>
+          <span>
+            Tu estrategia se construye considerando tus objetivos, antecedentes,
+            hábitos y estudios disponibles, cuando corresponda.
+          </span>
         </div>
       </div>
-      <div class="card shadow-xl video-box" id="videos" aria-label="Video del método">
-        <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1514517220039-0701f04e837b?q=80&w=1400&auto=format&fit=crop">
-          <source src="" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="sobre-mi">
-    <div class="container grid-2">
-      <div class="card" style="padding:22px">
-        <h2>Sobre mí</h2>
-        <div class="accent-bar"></div>
-        <p class="muted">Creo firmemente que cada persona tiene el poder de transformar su vida. Mi misión es guiarte en ese camino: ayudarte a recuperar tu energía, alcanzar tu mejor versión y vivir con confianza y plenitud. He acompañado a personas a mejorar su salud, rendimiento y bienestar integral, integrando nutrición, entrenamiento y un enfoque humano.</p>
-        <ul class="muted">
-          <li>Entrenamiento en TRX</li>
-          <li>HIIT (Entrenamiento interválico de alta intensidad)</li>
-          <li>Nutrición Renal</li>
-          <li>Diabetes</li>
-          <li>Nutrición Pediátrica</li>
-        </ul>
-      </div>
-      <div class="card shadow-xl video-box" aria-label="Video de presentación">
-        <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop">
-          <source src="" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
+    <section id="beneficios">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Una consulta que empieza por entenderte</h2>
+          <p class="muted">
+            El objetivo no es entregarte una dieta genérica, sino construir una estrategia
+            que puedas aplicar, medir y ajustar.
+          </p>
+        </div>
 
-  <section id="planes">
-    <div class="container">
-      <h2>Planes</h2>
-      <p class="muted">Opciones flexibles según tus objetivos. Solicita una propuesta personalizada.</p>
-      <div class="grid-3" style="margin-top:16px">
-        <div class="card" style="padding:24px">
-          <h3>Start</h3>
-          <p class="muted">Plan alimentario personalizado + rutina base de 4 semanas.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
-        </div>
-        <div class="card" style="padding:24px; border:2px solid rgba(217,174,95,.35)">
-          <h3>Premium</h3>
-          <p class="muted">Plan clínico + recetas + entrenamiento progresivo + seguimiento semanal.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
-        </div>
-        <div class="card" style="padding:24px">
-          <h3>Elite</h3>
-          <p class="muted">Todo lo anterior + sesiones 1:1 y reportes para tu médico.</p>
-          <a href="#contacto" class="btn btn-primary" style="margin-top:10px">Solicitar propuesta</a>
+        <div class="grid-3">
+          <article class="feature">
+            <h3>Evaluación personal</h3>
+            <p>Revisión de antecedentes, hábitos, actividades, objetivos y dificultades actuales.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Estrategia aplicable</h3>
+            <p>Recomendaciones adaptadas a tus horarios, preferencias, posibilidades y estilo de vida.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Seguimiento con propósito</h3>
+            <p>Revisión de avances y ajustes para evitar que el plan se vuelva estático o poco realista.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contacto">
-    <div class="container grid-2">
-      <div>
-        <h2>Agenda tu valoración</h2>
-        <p class="muted">Cuéntanos sobre tu objetivo y agenda una llamada de 15 minutos.</p>
-        <form id="leadForm" class="card" style="padding:18px" action="https://formspree.io/f/mpwlnbpa" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
-          <input type="email" name="email" placeholder="Email" aria-label="Email" required>
-          <input type="tel" name="telefono" placeholder="WhatsApp" aria-label="WhatsApp" required>
-          <select name="objetivo" aria-label="Tu objetivo" required>
-            <option value="">Tu objetivo</option>
-            <option>Pérdida de grasa</option>
-            <option>Rendimiento</option>
-            <option>Control de glucosa</option>
-            <option>Salud general</option>
-          </select>
-          <textarea name="mensaje" rows="4" placeholder="Cuéntame brevemente tu caso" aria-label="Mensaje"></textarea>
-          <button class="btn btn-primary" type="submit">Quiero mi valoración</button>
-          <p class="disclaimer">Al continuar aceptas ser contactado(a) por WhatsApp o email. Sin spam.</p>
-        </form>
+    <section id="consulta">
+      <div class="container">
+        <div class="section-heading">
+          <span class="pill">Servicios</span>
+          <h2 style="margin-top:12px">Elige el siguiente paso correcto</h2>
+          <p class="muted">La primera consulta te da dirección. El seguimiento convierte esa dirección en un proceso.</p>
+        </div>
 
-        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-          <a class="btn btn-primary" href="https://wa.me/523313430157?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="" style="width:20px;height:20px;filter:invert(73%) sepia(39%) saturate(460%) hue-rotate(5deg) brightness(95%) contrast(89%);">
-            WhatsApp inmediato
+        <div class="grid-3">
+          <article class="card service-card highlight shadow-xl">
+            <span class="pill">Punto de entrada</span>
+            <h3 style="margin-top:16px">Consulta nutricional inicial</h3>
+            <div class="service-price">$800 MXN</div>
+            <ul>
+              <li>Evaluación de hábitos y objetivos</li>
+              <li>Valoración nutricional</li>
+              <li>Estrategia personalizada</li>
+              <li>Explicación de prioridades</li>
+              <li>Recomendación del siguiente control</li>
+            </ul>
+            <a class="btn btn-primary booking-link" href="#" data-booking>Reservar consulta</a>
+          </article>
+
+          <article class="card service-card">
+            <span class="pill">Continuidad</span>
+            <h3 style="margin-top:16px">Seguimiento NutriElite</h3>
+            <p class="muted">
+              Revisión de avances, adherencia, mediciones y ajustes según tu respuesta al plan.
+            </p>
+            <ul>
+              <li>Detección de obstáculos</li>
+              <li>Ajustes de alimentación</li>
+              <li>Actualización de objetivos</li>
+              <li>Decisiones basadas en evolución</li>
+            </ul>
+            <a class="btn btn-ghost conversion-link"
+               href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20seguimiento%20NutriElite."
+               target="_blank" rel="noopener noreferrer">
+              Consultar seguimiento
+            </a>
+          </article>
+
+          <article class="card service-card">
+            <span class="pill">Proceso integral</span>
+            <h3 style="margin-top:16px">Programa NutriElite</h3>
+            <p class="muted">
+              Para quienes requieren un proceso estructurado de nutrición, seguimiento y,
+              cuando corresponde, orientación de entrenamiento.
+            </p>
+            <ul>
+              <li>Evaluación inicial</li>
+              <li>Controles programados</li>
+              <li>Ajustes por etapa</li>
+              <li>Objetivos medibles y realistas</li>
+            </ul>
+            <a class="btn btn-ghost conversion-link"
+               href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20saber%20si%20el%20Programa%20NutriElite%20es%20adecuado%20para%20m%C3%AD."
+               target="_blank" rel="noopener noreferrer">
+              Solicitar información
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo">
+      <div class="container grid-2">
+        <div>
+          <span class="pill">Método NutriElite</span>
+          <h2 style="margin-top:12px">Evaluar, diseñar, aplicar y ajustar</h2>
+          <div class="accent-bar"></div>
+          <p class="muted">
+            NutriElite organiza el acompañamiento para que cada decisión tenga un motivo y cada
+            ajuste responda a lo que está ocurriendo en la práctica.
+          </p>
+
+          <ul class="check-list">
+            <li>Evaluación de historia, hábitos, preferencias y composición corporal cuando corresponda.</li>
+            <li>Estrategia de alimentación adaptada a tus tiempos y objetivos.</li>
+            <li>Orientación de entrenamiento cuando forme parte del servicio contratado.</li>
+            <li>Revisión de sueño, estrés, recuperación y adherencia.</li>
+            <li>Ajustes progresivos, sin depender de soluciones extremas.</li>
+          </ul>
+
+          <a class="btn btn-primary conversion-link"
+             href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20saber%20c%C3%B3mo%20funciona%20el%20M%C3%A9todo%20NutriElite."
+             target="_blank" rel="noopener noreferrer">
+            Conocer mi mejor opción
           </a>
         </div>
-      </div>
 
-      <div class="card" style="padding:22px">
-        <h3 style="margin-top:0">¿Qué pasa después?</h3>
-        <ol class="muted">
-          <li>Te escribimos para coordinar la llamada.</li>
-          <li>Evaluación rápida y definición de objetivos.</li>
-          <li>Inicio del plan en 48–72 h.</li>
-        </ol>
-        <div class="card" style="padding:12px;margin-top:16px;background:#0f131c;border:2px solid rgba(217,174,95,.3)">
-          <strong>Atendemos CDMX/Guadalajara y online.</strong>
+        <div class="card shadow-xl" style="padding:26px">
+          <h3>¿Cómo funciona?</h3>
+          <ol class="muted" style="padding-left:22px;display:grid;gap:15px">
+            <li><strong class="gold">Reserva.</strong> Eliges un horario y confirmas tu consulta.</li>
+            <li><strong class="gold">Evaluamos.</strong> Identificamos tu situación y el objetivo prioritario.</li>
+            <li><strong class="gold">Diseñamos.</strong> Recibes una estrategia adaptada a tu contexto.</li>
+            <li><strong class="gold">Implementas.</strong> Aplicas el plan con indicaciones claras.</li>
+            <li><strong class="gold">Ajustamos.</strong> Revisamos avances y modificamos lo necesario.</li>
+          </ol>
+          <p class="disclaimer" style="margin-bottom:0">
+            Los resultados dependen de la situación individual, adherencia, seguimiento y otros factores.
+            No se ofrecen resultados garantizados.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="container grid-2">
+        <div class="card profile-image shadow-xl" role="img" aria-label="Entrenamiento y acompañamiento profesional"></div>
+
+        <div class="card profile-panel">
+          <span class="pill">Tu profesional</span>
+          <h2 style="margin-top:12px">Nutriólogo Israel Loayza</h2>
+          <div class="accent-bar"></div>
+
+          <p class="muted">
+            Mi trabajo integra nutrición, entrenamiento y acompañamiento práctico para ayudar a
+            cada persona a tomar decisiones sostenibles. La prioridad es comprender tu contexto,
+            explicarte la estrategia y construir un proceso que puedas mantener.
+          </p>
+
+          <p class="muted">Áreas comunicadas en la propuesta NutriElite:</p>
+          <ul class="check-list">
+            <li>Nutrición y composición corporal</li>
+            <li>Entrenamiento TRX y HIIT</li>
+            <li>Nutrición renal</li>
+            <li>Diabetes y control de hábitos</li>
+            <li>Nutrición pediátrica</li>
+          </ul>
+
+          <!--
+            IMPORTANTE:
+            Agrega aquí universidad, cédula profesional, años de experiencia
+            y certificaciones reales. No publiques datos no verificables.
+          -->
+
+          <a class="btn btn-ghost" href="#ubicacion">Ver consultorio</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="preparacion">
+      <div class="container grid-2">
+        <div>
+          <span class="pill">Prepara tu consulta</span>
+          <h2 style="margin-top:12px">Estudios y antecedentes</h2>
+          <div class="accent-bar"></div>
+          <p class="muted">
+            Si cuentas con estudios de laboratorio recientes, recetas, diagnósticos o indicaciones
+            médicas, llévalos a tu valoración. Esta información ayuda a adaptar mejor la estrategia
+            nutricional a tu situación.
+          </p>
+          <p class="muted">
+            No realices estudios adicionales por tu cuenta. Cuando tu caso requiera análisis
+            específicos, se te indicará cuáles son pertinentes antes de confirmar o durante el proceso
+            de valoración.
+          </p>
+        </div>
+
+        <div class="card" style="padding:26px">
+          <h3>Antes de tu cita</h3>
+          <ul class="check-list">
+            <li>Identifica tu objetivo principal.</li>
+            <li>Ten a la mano diagnósticos y medicamentos actuales.</li>
+            <li>Lleva estudios recientes cuando ya cuentes con ellos.</li>
+            <li>Informa si tienes diabetes, enfermedad renal u otra condición médica.</li>
+            <li>No compres suplementos antes de recibir una recomendación individual.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <div class="container">
+        <div class="section-heading">
+          <span class="pill">Consulta presencial</span>
+          <h2 style="margin-top:12px">Tlajomulco Centro</h2>
+          <p class="muted">Información consistente con tu Perfil de Google para reducir dudas y citas perdidas.</p>
+        </div>
+
+        <div class="grid-2">
+          <iframe
+            class="map shadow-xl"
+            title="Mapa del consultorio de Israel Loayza"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=C.%20Ju%C3%A1rez%20Eje%20Sur%2081%2C%20Centro%2C%2045640%20Tlajomulco%20de%20Z%C3%BA%C3%B1iga%2C%20Jal.&output=embed">
+          </iframe>
+
+          <div class="card location-card">
+            <h3>Nutriólogo Israel Loayza</h3>
+            <address>
+              <div class="contact-detail">
+                <span aria-hidden="true">📍</span>
+                <div>
+                  <strong>Dirección</strong><br>
+                  C. Juárez Eje Sur 81, Centro,<br>
+                  45640 Tlajomulco de Zúñiga, Jal.
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span aria-hidden="true">📱</span>
+                <div>
+                  <strong>WhatsApp</strong><br>
+                  <a class="gold" href="https://wa.me/523313430157" target="_blank" rel="noopener noreferrer">
+                    +52 33 1343 0157
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span aria-hidden="true">🗓️</span>
+                <div>
+                  <strong>Atención</strong><br>
+                  Con cita previa.
+                </div>
+              </div>
+            </address>
+
+            <div class="button-row">
+              <a class="btn btn-primary conversion-link"
+                 href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac"
+                 target="_blank" rel="noopener noreferrer">
+                Abrir en Google Maps
+              </a>
+              <a class="btn btn-ghost"
+                 href="https://g.page/r/CaDq-OcBwQxxEBE/review"
+                 target="_blank" rel="noopener noreferrer">
+                Dejar una reseña
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container grid-2">
+        <div>
+          <span class="pill">Agenda</span>
+          <h2 style="margin-top:12px">Solicita tu consulta</h2>
+          <p class="muted">
+            Completa tus datos o utiliza WhatsApp. El objetivo es confirmar directamente una
+            consulta, no añadir una llamada gratuita innecesaria.
+          </p>
+
+          <form id="leadForm"
+                class="card form-card shadow-xl"
+                action="https://formspree.io/f/mpwlnbpa"
+                method="POST">
+            <input type="hidden" name="origen" value="Landing NutriElite GitHub">
+            <input type="hidden" name="_subject" value="Nueva solicitud de consulta NutriElite">
+
+            <div>
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" type="text" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+            </div>
+
+            <div>
+              <label for="telefono">WhatsApp</label>
+              <input id="telefono" type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="33 0000 0000" required>
+            </div>
+
+            <div>
+              <label for="email">Correo electrónico</label>
+              <input id="email" type="email" name="email" autocomplete="email" placeholder="nombre@correo.com" required>
+            </div>
+
+            <div>
+              <label for="objetivo">Objetivo principal</label>
+              <select id="objetivo" name="objetivo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Mejorar composición corporal</option>
+                <option>Nutrición deportiva</option>
+                <option>Mejorar hábitos</option>
+                <option>Control de glucosa</option>
+                <option>Nutrición clínica</option>
+                <option>Otro objetivo</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="modalidad">Modalidad</label>
+              <select id="modalidad" name="modalidad" required>
+                <option value="">Selecciona una opción</option>
+                <option>Presencial en Tlajomulco</option>
+                <option>Consulta en línea</option>
+              </select>
+            </div>
+
+
+            <div>
+              <label for="laboratorios">¿Cuentas con estudios de laboratorio recientes?</label>
+              <select id="laboratorios" name="laboratorios" required>
+                <option value="">Selecciona una opción</option>
+                <option>Sí, realizados en los últimos tres meses</option>
+                <option>Sí, pero tienen más de tres meses</option>
+                <option>No cuento con estudios recientes</option>
+                <option>No estoy seguro de cuáles necesito</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensaje">Cuéntame brevemente tu caso</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Qué quieres mejorar y qué has intentado"></textarea>
+            </div>
+
+            <label class="checkbox-row" for="privacidad-check">
+              <input id="privacidad-check" type="checkbox" required>
+              <span>Acepto ser contactado por WhatsApp o correo y he leído el aviso de privacidad simplificado.</span>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Solicitar mi consulta</button>
+            <div id="formStatus" class="form-status" role="status">Enviando solicitud…</div>
+
+            <p class="disclaimer">
+              La consulta inicial tiene un costo de $800 MXN. El envío del formulario no confirma
+              la cita hasta acordar horario y forma de confirmación.
+            </p>
+          </form>
+
+          <div class="button-row">
+            <a class="btn btn-primary conversion-link"
+               href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20agendar%20mi%20consulta%20nutricional%20de%20%24800%20en%20Tlajomulco."
+               target="_blank" rel="noopener noreferrer">
+              <img class="whatsapp-icon"
+                   src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                   alt="">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card" style="padding:24px">
+            <h3>¿Qué pasa después?</h3>
+            <ol class="muted" style="padding-left:22px;display:grid;gap:12px">
+              <li>Revisamos tu solicitud.</li>
+              <li>Te proponemos horarios disponibles.</li>
+              <li>Confirmas tu cita según la política indicada.</li>
+              <li>Acudes a tu evaluación nutricional.</li>
+              <li>Definimos el seguimiento más adecuado.</li>
+            </ol>
+          </div>
+
+          <details id="privacidad">
+            <summary>Aviso de privacidad simplificado</summary>
+            <p class="muted" style="margin:12px 0 0">
+              Los datos enviados se utilizarán únicamente para responder tu solicitud,
+              coordinar la atención y dar seguimiento administrativo. No se venderán ni se
+              utilizarán para fines distintos sin tu consentimiento. Sustituye este texto por
+              tu aviso integral y datos del responsable antes de activar campañas.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Es obligatorio comprar suplementos?</summary>
+            <p class="muted" style="margin:12px 0 0">
+              No. Cualquier recomendación debe responder a la valoración individual. La compra
+              de productos no es una condición para recibir atención.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Los resultados están garantizados?</summary>
+            <p class="muted" style="margin:12px 0 0">
+              No se garantizan resultados específicos. La evolución depende de la situación
+              individual, adherencia, seguimiento y otros factores personales y clínicos.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cta">
+    <a class="btn btn-primary booking-link" href="#" data-booking>Agendar valoración · $800 MXN</a>
+  </div>
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
-      <div>© <span id="year"></span> NutriElite — Todos los derechos reservados</div>
-      <div style="display:flex;gap:16px">
-        <a href="#" title="Instagram">Instagram</a>
-        <a href="#" title="Facebook">Facebook</a>
-        <a href="#" title="YouTube">YouTube</a>
+      <div>
+        © <span id="year"></span> Nutriólogo Israel Loayza · Método NutriElite
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#privacidad">Privacidad</a>
+        <a href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        <a href="https://wa.me/523313430157" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
+    /*
+      RESERVA:
+      Sustituye la siguiente URL por tu enlace real de Encuadrado.
+      Mientras siga vacía, los botones de agenda abrirán WhatsApp.
+    */
+    const BOOKING_URL = "";
+    const WHATSAPP_FALLBACK =
+      "https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20agendar%20mi%20valoraci%C3%B3n%20nutricional%20de%20%24800%20MXN.";
 
-    // Validación mínima de formulario (tel)
-    const form = document.getElementById('leadForm');
-    form.addEventListener('submit', (e)=>{
-      const tel = form.telefono.value.trim();
-      if(tel && !/^[0-9+\-\s]{8,}$/.test(tel)){
-        e.preventDefault();
-        alert('Por favor ingresa un WhatsApp válido.');
+    document.querySelectorAll("[data-booking]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const destination = BOOKING_URL.trim() || WHATSAPP_FALLBACK;
+        window.open(destination, "_blank", "noopener,noreferrer");
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "begin_checkout", {
+            event_category: "agenda",
+            event_label: BOOKING_URL.trim() ? "encuadrado" : "whatsapp_fallback"
+          });
+        }
+      });
+    });
+
+
+    // Menú responsive y submenús
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuPanel = document.querySelector(".menu-panel");
+    const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+    if (menuToggle && menuPanel) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuPanel.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+    }
+
+    submenuToggles.forEach((toggle) => {
+      toggle.addEventListener("click", (event) => {
+        const parent = event.currentTarget.closest(".has-submenu");
+        const isOpen = parent.classList.toggle("is-open");
+        event.currentTarget.setAttribute("aria-expanded", String(isOpen));
+
+        if (window.innerWidth <= 1050) {
+          document.querySelectorAll(".has-submenu").forEach((item) => {
+            if (item !== parent) {
+              item.classList.remove("is-open");
+              const otherToggle = item.querySelector(".submenu-toggle");
+              if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 1050 && menuPanel) {
+          menuPanel.classList.remove("is-open");
+          menuToggle?.classList.remove("is-open");
+          menuToggle?.setAttribute("aria-expanded", "false");
+          menuToggle?.setAttribute("aria-label", "Abrir menú");
+        }
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (window.innerWidth > 1050) {
+        document.querySelectorAll(".has-submenu").forEach((item) => {
+          if (!item.contains(event.target)) {
+            item.classList.remove("is-open");
+            const toggle = item.querySelector(".submenu-toggle");
+            if (toggle) toggle.setAttribute("aria-expanded", "false");
+          }
+        });
       }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1050 && menuPanel) {
+        menuPanel.classList.remove("is-open");
+        menuToggle?.classList.remove("is-open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+    // Resalta la sección visible
+    const observedSections = document.querySelectorAll("main section[id]");
+    const sectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sectionLinks.forEach((link) => link.classList.remove("is-active"));
+            document
+              .querySelectorAll(`.nav-links a[href="#${entry.target.id}"]`)
+              .forEach((link) => link.classList.add("is-active"));
+          }
+        });
+      }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.01 });
+
+      observedSections.forEach((section) => observer.observe(section));
+    }
+
+    // Validación sencilla del teléfono.
+    const form = document.getElementById("leadForm");
+    const formStatus = document.getElementById("formStatus");
+
+    form.addEventListener("submit", (event) => {
+      const telefono = form.telefono.value.trim();
+
+      if (!/^[0-9+\-\s()]{8,}$/.test(telefono)) {
+        event.preventDefault();
+        alert("Por favor ingresa un WhatsApp válido.");
+        form.telefono.focus();
+        return;
+      }
+
+      formStatus.style.display = "block";
+
+      // Evento genérico. Funcionará cuando exista gtag en la página.
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          event_category: "formulario",
+          event_label: "solicitud_consulta"
+        });
+      }
+    });
+
+    // Medición de clics en WhatsApp, agenda y Maps.
+    document.querySelectorAll(".conversion-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "contact", {
+            event_category: "cta",
+            event_label: link.textContent.trim()
+          });
+        }
+      });
     });
   </script>
 </body>
