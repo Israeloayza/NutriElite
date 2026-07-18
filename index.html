@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es-MX">
 <head>
 <meta charset="utf-8"/>
@@ -9,29 +8,20 @@
 <meta content="Programas mensuales de nutrición presencial y en línea en Tlajomulco. Consulta desde $800 MXN con aplicación nutricional; seguimiento semanal y entrenamiento personalizado según el programa." name="description"/>
 <link href="https://israeloayza.github.io/NutriElite/" rel="canonical"/>
 <link as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" rel="preload"/>
-<!-- Open Graph: mejora la vista al compartir por WhatsApp y redes -->
 <meta content="website" property="og:type"/>
 <meta content="es_MX" property="og:locale"/>
 <meta content="Programas mensuales de nutrición | Israel Loayza" property="og:title"/>
 <meta content="Consulta mensual desde $800 MXN con aplicación nutricional. Elige dirección profesional, seguimiento semanal o nutrición y entrenamiento personalizados." property="og:description"/>
 <meta content="https://israeloayza.github.io/NutriElite/" property="og:url"/>
 <meta content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" property="og:image"/>
-<!-- Favicons existentes en el repositorio -->
 <link href="./favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
 <link href="./favicon.ico" rel="shortcut icon"/>
 <link href="./apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <meta content="NutriElite" name="apple-mobile-web-app-title"/>
-<link href="./site.webmanifest" rel="manifest"/>
-<!-- Tipografías originales -->
+<link href="./site.webmanifest?v=20260718" rel="manifest"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<!--
-    GOOGLE ADS / ANALYTICS
-    Cuando Google te entregue tu ID, pega aquí el código de Google Tag.
-    No publiques un ID inventado.
-  -->
-<!-- Datos estructurados para buscadores -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": [
@@ -260,7 +250,6 @@
       padding:0;
     }
     .nav-links a:not(.btn):hover{color:var(--gold)}
-
 
     /* Menú principal y submenús */
     .menu-panel{display:flex;align-items:center}
@@ -805,7 +794,6 @@
       .best-value{right:14px}
     }
 
-
     /* ======================================================
        PALETA CLÍNICA PREMIUM CÁLIDA
        Marfil + petróleo + salvia + oro apagado
@@ -1151,7 +1139,6 @@
       .technology-note{text-align:center}
     }
 
-
     /* Corrección de fondo a ancho completo en la portada */
     .hero{
       background:
@@ -1163,16 +1150,209 @@
     }
     .hero::before{display:none}
 
+
+
+    /* Restaurar fotografía profesional: esta regla debe ir después de #sobre-mi .card */
+    #sobre-mi .profile-image{
+      min-height:520px;
+      background:
+        linear-gradient(180deg,rgba(14,43,51,.03),rgba(14,43,51,.42)),
+        url("./assets/images/perfil-israel-loayza.jpg") center 28%/cover no-repeat;
+      border-color:rgba(197,154,82,.42);
+      box-shadow:0 24px 58px rgba(0,0,0,.24);
+    }
+    @media (max-width:700px){
+      #sobre-mi .profile-image{
+        min-height:430px;
+        background-position:center 24%;
+      }
+    }
+
+
+
+    /* Corrección superior: evitar cualquier artefacto visual en la cabecera */
+    header{overflow:hidden}
+    .brand{
+      gap:12px;
+      align-items:center;
+      min-height:52px;
+    }
+    .brand img{
+      width:42px;
+      height:42px;
+      min-width:42px;
+      min-height:42px;
+      object-fit:contain;
+      display:block;
+      border-radius:12px;
+      background:transparent;
+    }
+
+
+    /* Si el logo no carga, no mostrar texto o símbolo roto */
+    .brand img[alt=""]{font-size:0;line-height:0}
+
+html,body{
+  margin:0;
+  padding:0;
+  max-width:100%;
+  overflow-x:hidden;
+}
+body::before,
+header::before,
+header::after{
+  content:none!important;
+  display:none!important;
+}
+header{
+  top:0;
+  border-top:0!important;
+  overflow:visible;
+}
+.brand img{
+  display:block;
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  background:transparent;
+  border:0;
+}
+.contact-icon{
+  width:22px;
+  height:22px;
+  flex:0 0 22px;
+  fill:none;
+  stroke:#C59A52;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.whatsapp-icon{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+  flex:0 0 18px;
+}
+#sobre-mi .profile-image{
+  background:
+    linear-gradient(180deg,rgba(14,43,51,.03),rgba(14,43,51,.40)),
+    url("./assets/images/perfil-israel-loayza.jpg?v=20260718") center 24%/cover no-repeat!important;
+  min-height:520px;
+}
+@media(max-width:700px){
+  #sobre-mi .profile-image{
+    min-height:430px;
+    background-position:center 22%!important;
+  }
+}
+
+
+/* ======================================================
+   CORRECCIÓN DEFINITIVA DE LA FRANJA SUPERIOR
+   ====================================================== */
+html{
+  margin:0!important;
+  padding:0!important;
+  background:#0E2B33!important;
+}
+body{
+  margin:0!important;
+  padding:0!important;
+  background:#0E2B33!important;
+}
+body > header:first-child{
+  margin-top:0!important;
+}
+body::before,
+body::after,
+header::before,
+header::after{
+  content:none!important;
+  display:none!important;
+}
+header{
+  position:sticky!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  border-top:0!important;
+  background:#0E2B33!important;
+  color:#FFFFFF!important;
+  overflow:visible!important;
+  z-index:1000!important;
+}
+header .container{
+  background:#0E2B33!important;
+}
+nav[aria-label="Principal"]{
+  margin:0!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+  background:#0E2B33!important;
+}
+.brand{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  min-height:72px!important;
+  margin:0!important;
+  padding:0!important;
+}
+.brand-mark{
+  display:block!important;
+  width:42px!important;
+  height:42px!important;
+  min-width:42px!important;
+  min-height:42px!important;
+  flex:0 0 42px!important;
+  background-image:url("./apple-touch-icon.png?v=20260718")!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:contain!important;
+  border:0!important;
+  border-radius:12px!important;
+  overflow:hidden!important;
+}
+.brand strong,
+.brand small,
+.nav-links a:not(.btn),
+.submenu-toggle{
+  color:#FFFFFF!important;
+}
+.brand strong{color:#E5C78B!important}
+header + main{
+  margin-top:0!important;
+}
+main{
+  margin:0!important;
+  padding:0!important;
+  background:#F7F4ED!important;
+}
+.hero{
+  margin-top:0!important;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(111,174,155,.17),transparent 32%),
+    linear-gradient(135deg,#0E2B33,#102F38 55%,#0A232B)!important;
+}
+@media(max-width:1050px){
+  .brand{min-height:68px!important}
+  .menu-panel{
+    top:100%!important;
+    background:#0E2B33!important;
+  }
+}
 </style>
 
-&lt;!-- Los iconos de marca originales permanecen en el repositorio y no deben sustituirse. --&gt;
+&lt;!--  --&gt;
 </head>
-<body>
-<header>
+<body><header>
 <div class="container">
 <nav aria-label="Principal">
-<a aria-label="Ir al inicio" class="brand" href="#inicio">
-<img alt="Logotipo original de NutriElite" src="./apple-touch-icon.png"/>
+<a aria-label="Ir al inicio" class="brand" href="#inicio"><span aria-hidden="true" class="brand-mark"></span>
+
 <span class="brand-copy">
 <strong>NutriElite</strong>
 <small>Método de Israel Loayza</small>
@@ -1561,7 +1741,9 @@
 <h3>Nutriólogo Israel Loayza</h3>
 <address>
 <div class="contact-detail">
-<span aria-hidden="true">📍</span>
+<svg aria-hidden="true" class="contact-icon" viewbox="0 0 24 24">
+<path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Zm0-9.2A2.8 2.8 0 1 1 12 6a2.8 2.8 0 0 1 0 5.8Z"></path>
+</svg>
 <div>
 <strong>Dirección</strong><br/>
                   C. Juárez Eje Sur 81, Centro,<br/>
@@ -1569,7 +1751,9 @@
                 </div>
 </div>
 <div class="contact-detail">
-<span aria-hidden="true">📱</span>
+<svg aria-hidden="true" class="contact-icon" viewbox="0 0 24 24">
+<path d="M7.1 2h2.4l1.2 5-1.8 1.6a15.8 15.8 0 0 0 6.5 6.5l1.6-1.8 5 1.2v2.4A5.1 5.1 0 0 1 16.9 22C8.7 22 2 15.3 2 7.1A5.1 5.1 0 0 1 7.1 2Z"></path>
+</svg>
 <div>
 <strong>WhatsApp</strong><br/>
 <a class="gold" href="https://wa.me/523313430157" rel="noopener noreferrer" target="_blank">
@@ -1578,7 +1762,9 @@
 </div>
 </div>
 <div class="contact-detail">
-<span aria-hidden="true">🗓️</span>
+<svg aria-hidden="true" class="contact-icon" viewbox="0 0 24 24">
+<path d="M7 2v3M17 2v3M4 9h16M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Zm3 9h3v3H8v-3Z"></path>
+</svg>
 <div>
 <strong>Atención</strong><br/>
                   Con cita previa.
@@ -1666,7 +1852,9 @@
 </p>
 </form>
 <div class="button-row">
-<a class="btn btn-ghost conversion-link" href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20orientaci%C3%B3n%20para%20elegir%20un%20programa%20mensual." rel="noopener noreferrer" target="_blank"><img alt="" aria-hidden="true" class="whatsapp-icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"/>
+<a class="btn btn-ghost conversion-link" href="https://wa.me/523313430157?text=Hola%20Israel%2C%20quiero%20orientaci%C3%B3n%20para%20elegir%20un%20programa%20mensual." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="whatsapp-icon" viewbox="0 0 24 24">
+<path d="M12.04 2a9.84 9.84 0 0 0-8.42 14.93L2 22l5.2-1.57A9.92 9.92 0 1 0 12.04 2Zm0 17.98a8.05 8.05 0 0 1-4.1-1.12l-.3-.18-3.09.94.96-3-.2-.31a8.1 8.1 0 1 1 6.73 3.67Zm4.44-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.19-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"></path>
+</svg>
   Prefiero preguntar por WhatsApp
 </a>
 </div>
@@ -1825,8 +2013,6 @@
       });
     });
 
-
-
     // Menú responsive y submenús
     const menuToggle = document.querySelector(".menu-toggle");
     const menuPanel = document.querySelector(".menu-panel");
@@ -1891,7 +2077,6 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
-
 
     // Resalta la sección visible
     const observedSections = document.querySelectorAll("main section[id]");

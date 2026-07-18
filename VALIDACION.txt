@@ -1,0 +1,21 @@
+VALIDACIÓN DE LA LANDING
+
+- DOCTYPE correcto: OK
+- Sin leyenda de iconos: OK
+- Sin privacidad provisional: OK
+- Sin emojis problemáticos: OK
+- Foto incluida: OK
+- Foto referenciada: OK
+- Esencial: OK
+- Acompañamiento: OK
+- Integral: OK
+- Nutrimind: OK
+- Credenciales: OK
+- Formulario: OK
+- Sin IDs duplicados: OK
+- Sin destinos internos faltantes: OK
+- Manifest relativo: OK
+
+IDs revisados: 24
+Enlaces internos revisados: 19
+Foto profesional: 237.8 KB

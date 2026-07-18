@@ -1,21 +1,23 @@
 {
-  "name": "Israeloayza",
-  "short_name": "Elite",
+  "name": "Nutriólogo Israel Loayza · NutriElite",
+  "short_name": "NutriElite",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F7F4ED",
+  "theme_color": "#143642",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "./web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "./web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
-  ],
-  "theme_color": "#000000",
-  "background_color": "#030303",
-  "display": "standalone"
+  ]
 }

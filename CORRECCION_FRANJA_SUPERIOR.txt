@@ -1,0 +1,26 @@
+CORRECCIÓN DEFINITIVA DE LA FRANJA SUPERIOR
+
+CAUSA EVITADA
+- El encabezado ya no utiliza una etiqueta <img> para el logotipo.
+- El logotipo original se carga como fondo CSS.
+- Si el archivo del logotipo tarda o falla, no aparecerá ningún símbolo roto.
+- HTML, BODY, HEADER y NAV tienen fondo petróleo explícito desde el primer píxel.
+- Se eliminó cualquier comentario o contenido antes del encabezado.
+
+PUBLICACIÓN
+1. Descomprime este ZIP.
+2. En GitHub abre Israeloayza/NutriElite.
+3. Add file > Upload files.
+4. Arrastra TODO el contenido descomprimido.
+5. Confirma que index.html y .nojekyll estén en la raíz.
+6. Commit:
+   Elimina franja superior y corrige encabezado
+7. Ve a Actions y espera el despliegue en verde.
+8. Abre:
+   https://israeloayza.github.io/NutriElite/?v=20260718
+9. Haz una recarga forzada:
+   Windows: Ctrl + F5
+   Mac: Command + Shift + R
+   Móvil: abre una pestaña privada.
+
+NO BORRES LOS ICONOS ORIGINALES YA EXISTENTES EN EL REPOSITORIO.
