@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
+<head><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+(function(){
+  const KEY = "nutrielite_consent_v1";
+  let stored = null;
+
+  try {
+    stored = localStorage.getItem(KEY);
+  } catch (error) {
+    stored = null;
+  }
+
+  const granted = stored === "granted";
+
+  gtag("consent", "default", {
+    analytics_storage: granted ? "granted" : "denied",
+    ad_storage: granted ? "granted" : "denied",
+    ad_user_data: granted ? "granted" : "denied",
+    ad_personalization: granted ? "granted" : "denied",
+    wait_for_update: 500
+  });
+
+  window.NUTRIELITE_CONSENT_KEY = KEY;
+  window.NUTRIELITE_STORED_CONSENT = stored;
+})();
+</script><script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+  'gtm.start': new Date().getTime(), event:'gtm.js'
+});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T34S45NN');
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#143642" name="theme-color"/>
@@ -1509,9 +1543,92 @@ main{
     padding:12px 14px;
   }
 }
+
+
+.cookie-consent{
+  position:fixed;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  width:min(860px,calc(100% - 36px));
+  margin:0 auto;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border:1px solid rgba(197,154,82,.5);
+  border-radius:18px;
+  background:#0E2B33;
+  color:#FFFFFF;
+  box-shadow:0 24px 65px rgba(0,0,0,.3);
+}
+.cookie-consent[hidden]{display:none!important}
+.cookie-consent__copy{max-width:590px}
+.cookie-consent__copy strong{
+  display:block;
+  margin-bottom:4px;
+  color:#E5C78B;
+  font-size:1rem;
+}
+.cookie-consent__copy p{
+  margin:0;
+  color:rgba(255,255,255,.78);
+  font-size:.84rem;
+  line-height:1.45;
+}
+.cookie-consent__actions{
+  display:flex;
+  flex:0 0 auto;
+  gap:9px;
+}
+.cookie-btn{
+  min-height:42px;
+  padding:9px 13px;
+  border-radius:11px;
+  font:inherit;
+  font-size:.82rem;
+  font-weight:850;
+  cursor:pointer;
+}
+.cookie-btn--secondary{
+  border:1px solid rgba(255,255,255,.35);
+  background:transparent;
+  color:#FFFFFF;
+}
+.cookie-btn--primary{
+  border:1px solid #C59A52;
+  background:#C59A52;
+  color:#17242A;
+}
+.cookie-settings{
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  text-decoration:underline;
+  cursor:pointer;
+}
+@media(max-width:680px){
+  .cookie-consent{
+    bottom:10px;
+    display:block;
+    padding:15px;
+  }
+  .cookie-consent__actions{
+    margin-top:13px;
+  }
+  .cookie-btn{
+    flex:1;
+  }
+}
 </style>
 </head>
-<body><header>
+<body data-page-type="landing"><noscript>
+<iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-T34S45NN" style="display:none;visibility:hidden" title="Google Tag Manager" width="0"></iframe>
+</noscript><header>
 <div class="container">
 <nav aria-label="Principal">
 <a aria-label="Ir al inicio" class="brand" href="#inicio"><span aria-hidden="true" class="brand-mark"></span>
@@ -1944,7 +2061,7 @@ main{
 <span class="pill">Agenda</span>
 <h2 style="margin-top:12px">Recibe una recomendación antes de reservar</h2>
 <p class="muted">No necesitas decidir solo. Responde estas preguntas y te indicaremos qué programa es coherente con tu objetivo y nivel de apoyo.</p>
-<div class="selection-message" id="selectionMessage" role="status"></div><form action="https://formspree.io/f/mpwlnbpa" class="card form-card shadow-xl" id="leadForm" method="POST">
+<div class="selection-message" id="selectionMessage" role="status"></div><form action="https://formspree.io/f/mpwlnbpa" class="card form-card shadow-xl" id="leadForm" method="POST"><input id="tracking_landing_page" name="landing_page" type="hidden"/><input id="tracking_gclid" name="gclid" type="hidden"/><input id="tracking_utm_content" name="utm_content" type="hidden"/><input id="tracking_utm_term" name="utm_term" type="hidden"/><input id="tracking_utm_campaign" name="utm_campaign" type="hidden"/><input id="tracking_utm_medium" name="utm_medium" type="hidden"/><input id="tracking_utm_source" name="utm_source" type="hidden"/>
 <input name="origen" type="hidden" value="Landing NutriElite · Programas mensuales"/>
 <input name="_subject" type="hidden" value="Nueva solicitud de programa NutriElite"/>
 <div>
@@ -2088,210 +2205,398 @@ main{
 <a href="#privacidad">Privacidad</a>
 <a href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" rel="noopener noreferrer" target="_blank">Google Maps</a>
 <a href="https://wa.me/523313430157" rel="noopener noreferrer" target="_blank">WhatsApp</a>
-</div>
+<button class="cookie-settings" data-cookie-settings="" type="button">Preferencias de medición</button></div>
 </div>
 </footer>
-<script>
-    
-    /*
-      ENCUADRADO:
-      Pega cada enlace real cuando los servicios estén creados.
-      Mientras estén vacíos:
-      - Los botones de los paquetes preseleccionan el formulario.
-      - Los botones generales abren WhatsApp.
-    */
-    const BOOKING_URLS = {
-      orientacion: "./agendar.html",
-      esencial: "./agendar.html#esencial",
-      acompanamiento: "./agendar-acompanamiento.html",
-      integral: "./agendar-integral.html"
-    };
 
-    const WHATSAPP_MESSAGES = {
-      orientacion:
-        "Hola Israel, quiero orientación para elegir un programa mensual de nutrición.",
-      esencial:
-        "Hola Israel, me interesa NutriElite Esencial de $800 MXN al mes.",
-      acompanamiento:
-        "Hola Israel, me interesa NutriElite Acompañamiento de $1,200 MXN al mes.",
-      integral:
-        "Hola Israel, me interesa NutriElite Integral de $1,600 MXN al mes."
-    };
+<div aria-labelledby="cookieTitle" aria-modal="true" class="cookie-consent" hidden="" id="cookieConsent" role="dialog">
+<div class="cookie-consent__copy">
+<strong id="cookieTitle">Privacidad y medición</strong>
+<p>
+      Usamos medición de Google para conocer el tráfico y mejorar la página.
+      No enviamos nombres, teléfonos, diagnósticos ni datos clínicos.
+    </p>
+</div>
+<div class="cookie-consent__actions">
+<button class="cookie-btn cookie-btn--secondary" data-consent-choice="essential" type="button">
+      Solo necesarias
+    </button>
+<button class="cookie-btn cookie-btn--primary" data-consent-choice="granted" type="button">
+      Aceptar medición
+    </button>
+</div>
+</div><script>
+(function(){
+  const banner = document.getElementById("cookieConsent");
+  const settingsButtons = document.querySelectorAll("[data-cookie-settings]");
+  const KEY = window.NUTRIELITE_CONSENT_KEY || "nutrielite_consent_v1";
 
-    const whatsappUrl = (message) =>
-      "https://wa.me/523313430157?text=" + encodeURIComponent(message);
+  const saveChoice = (choice) => {
+    try {
+      localStorage.setItem(KEY, choice);
+    } catch (error) {}
 
-    document.querySelectorAll("[data-booking]").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
+    const granted = choice === "granted";
 
-        const service = link.dataset.booking || "orientacion";
-        const bookingUrl = (BOOKING_URLS[service] || "").trim();
-
-        if (bookingUrl) {
-          if (bookingUrl.startsWith("./") || bookingUrl.startsWith("/")) {
-            window.location.href = bookingUrl;
-          } else {
-            window.open(bookingUrl, "_blank", "noopener,noreferrer");
-          }
-        } else if (link.classList.contains("package-select")) {
-          const packageSelect = document.getElementById("nivel_apoyo");
-          const selectionMessage = document.getElementById("selectionMessage");
-          const selectedValue = link.dataset.packageValue || "";
-
-          if (packageSelect && selectedValue) {
-            packageSelect.value = selectedValue;
-          }
-
-          if (selectionMessage) {
-            selectionMessage.textContent =
-              "Seleccionaste " + link.closest(".package-card").querySelector("h3").textContent +
-              ". Completa tus datos para recibir horarios y confirmar si es la mejor opción.";
-            selectionMessage.style.display = "block";
-          }
-
-          document.getElementById("contacto")?.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-        } else {
-          window.open(
-            whatsappUrl(WHATSAPP_MESSAGES[service] || WHATSAPP_MESSAGES.orientacion),
-            "_blank",
-            "noopener,noreferrer"
-          );
-        }
-
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "select_item", {
-            event_category: "programas",
-            event_label: service,
-            booking_destination: bookingUrl ? "encuadrado" : "landing_or_whatsapp"
-          });
-        }
-      });
+    gtag("consent", "update", {
+      analytics_storage: granted ? "granted" : "denied",
+      ad_storage: granted ? "granted" : "denied",
+      ad_user_data: granted ? "granted" : "denied",
+      ad_personalization: granted ? "granted" : "denied"
     });
 
-    // Menú responsive y submenús
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menuPanel = document.querySelector(".menu-panel");
-    const submenuToggles = document.querySelectorAll(".submenu-toggle");
+    window.dataLayer.push({
+      event: "consent_update",
+      consent_state: granted ? "granted" : "essential"
+    });
 
-    if (menuToggle && menuPanel) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = menuPanel.classList.toggle("is-open");
-        menuToggle.classList.toggle("is-open", isOpen);
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
-      });
+    if (banner) banner.hidden = true;
+  };
+
+  if (banner && !window.NUTRIELITE_STORED_CONSENT) {
+    banner.hidden = false;
+  }
+
+  document.querySelectorAll("[data-consent-choice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      saveChoice(button.dataset.consentChoice);
+    });
+  });
+
+  settingsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (banner) banner.hidden = false;
+    });
+  });
+})();
+</script><script>
+window.NutriEliteAnalytics = window.NutriEliteAnalytics || {
+  push(eventName, parameters = {}) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: eventName,
+      page_type: document.body.dataset.pageType || "unknown",
+      ...parameters
+    });
+  }
+};
+</script><script>
+(function(){
+  const track = (name, params = {}) =>
+    window.NutriEliteAnalytics.push(name, params);
+
+  const BOOKING_URLS = {
+    orientacion: "./agendar.html",
+    esencial: "./agendar.html#esencial",
+    acompanamiento: "./agendar-acompanamiento.html",
+    integral: "./agendar-integral.html"
+  };
+
+  const PROGRAMS = {
+    esencial: {
+      programa: "esencial",
+      modalidad: "por_elegir",
+      value: 800,
+      currency: "MXN"
+    },
+    acompanamiento: {
+      programa: "acompanamiento",
+      modalidad: "presencial_online",
+      value: 1200,
+      currency: "MXN"
+    },
+    integral: {
+      programa: "integral",
+      modalidad: "presencial_online",
+      value: 1600,
+      currency: "MXN"
+    }
+  };
+
+  const normalize = (value) =>
+    String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_|_$/g, "");
+
+  const persistCampaign = () => {
+    const keys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "gclid"
+    ];
+
+    let stored = {};
+    try {
+      stored = JSON.parse(sessionStorage.getItem("nutrielite_campaign") || "{}");
+    } catch (error) {
+      stored = {};
     }
 
-    submenuToggles.forEach((toggle) => {
-      toggle.addEventListener("click", (event) => {
-        const parent = event.currentTarget.closest(".has-submenu");
-        const isOpen = parent.classList.toggle("is-open");
-        event.currentTarget.setAttribute("aria-expanded", String(isOpen));
-
-        if (window.innerWidth <= 1050) {
-          document.querySelectorAll(".has-submenu").forEach((item) => {
-            if (item !== parent) {
-              item.classList.remove("is-open");
-              const otherToggle = item.querySelector(".submenu-toggle");
-              if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
-            }
-          });
-        }
-      });
+    const params = new URLSearchParams(window.location.search);
+    keys.forEach((key) => {
+      const value = params.get(key);
+      if (value) stored[key] = value.slice(0, 250);
     });
 
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 1050 && menuPanel) {
-          menuPanel.classList.remove("is-open");
-          menuToggle?.classList.remove("is-open");
-          menuToggle?.setAttribute("aria-expanded", "false");
-          menuToggle?.setAttribute("aria-label", "Abrir menú");
-        }
-      });
+    try {
+      sessionStorage.setItem("nutrielite_campaign", JSON.stringify(stored));
+    } catch (error) {}
+
+    keys.forEach((key) => {
+      const field = document.getElementById("tracking_" + key);
+      if (field) field.value = stored[key] || "";
     });
 
-    document.addEventListener("click", (event) => {
-      if (window.innerWidth > 1050) {
+    const landingField = document.getElementById("tracking_landing_page");
+    if (landingField) {
+      landingField.value =
+        window.location.origin + window.location.pathname;
+    }
+  };
+
+  persistCampaign();
+
+  document.querySelectorAll("[data-booking]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const service = link.dataset.booking || "orientacion";
+      const bookingUrl = BOOKING_URLS[service] || "./agendar.html";
+
+      if (service === "orientacion" || service === "esencial") {
+        track("open_booking_options", {
+          programa: service === "esencial" ? "esencial" : "sin_definir",
+          modalidad: "por_elegir"
+        });
+      } else if (PROGRAMS[service]) {
+        track("select_program", PROGRAMS[service]);
+      }
+
+      window.location.href = bookingUrl;
+    });
+  });
+
+  // Menú responsive.
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menuPanel = document.querySelector(".menu-panel");
+  const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+  if (menuToggle && menuPanel) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuPanel.classList.toggle("is-open");
+      menuToggle.classList.toggle("is-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Cerrar menú" : "Abrir menú"
+      );
+    });
+  }
+
+  submenuToggles.forEach((toggle) => {
+    toggle.addEventListener("click", (event) => {
+      const parent = event.currentTarget.closest(".has-submenu");
+      const isOpen = parent.classList.toggle("is-open");
+      event.currentTarget.setAttribute("aria-expanded", String(isOpen));
+
+      if (window.innerWidth <= 1050) {
         document.querySelectorAll(".has-submenu").forEach((item) => {
-          if (!item.contains(event.target)) {
+          if (item !== parent) {
             item.classList.remove("is-open");
-            const toggle = item.querySelector(".submenu-toggle");
-            if (toggle) toggle.setAttribute("aria-expanded", "false");
+            item
+              .querySelector(".submenu-toggle")
+              ?.setAttribute("aria-expanded", "false");
           }
         });
       }
     });
+  });
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 1050 && menuPanel) {
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 1050 && menuPanel) {
         menuPanel.classList.remove("is-open");
         menuToggle?.classList.remove("is-open");
         menuToggle?.setAttribute("aria-expanded", "false");
+        menuToggle?.setAttribute("aria-label", "Abrir menú");
       }
     });
+  });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Resalta la sección visible
-    const observedSections = document.querySelectorAll("main section[id]");
-    const sectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            sectionLinks.forEach((link) => link.classList.remove("is-active"));
-            document
-              .querySelectorAll(`.nav-links a[href="#${entry.target.id}"]`)
-              .forEach((link) => link.classList.add("is-active"));
-          }
-        });
-      }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.01 });
-
-      observedSections.forEach((section) => observer.observe(section));
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth > 1050) {
+      document.querySelectorAll(".has-submenu").forEach((item) => {
+        if (!item.contains(event.target)) {
+          item.classList.remove("is-open");
+          item
+            .querySelector(".submenu-toggle")
+            ?.setAttribute("aria-expanded", "false");
+        }
+      });
     }
+  });
 
-    // Validación sencilla del teléfono.
-    const form = document.getElementById("leadForm");
-    const formStatus = document.getElementById("formStatus");
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1050 && menuPanel) {
+      menuPanel.classList.remove("is-open");
+      menuToggle?.classList.remove("is-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    }
+  });
 
-    form.addEventListener("submit", (event) => {
-      const telefono = form.telefono.value.trim();
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-      if (!/^[0-9+\-\s()]{8,}$/.test(telefono)) {
-        event.preventDefault();
+  // Resalta la sección visible.
+  const observedSections = document.querySelectorAll("main section[id]");
+  const sectionLinks =
+    document.querySelectorAll('.nav-links a[href^="#"]');
+
+  if ("IntersectionObserver" in window) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sectionLinks.forEach((link) =>
+            link.classList.remove("is-active")
+          );
+          document
+            .querySelectorAll(
+              `.nav-links a[href="#${entry.target.id}"]`
+            )
+            .forEach((link) => link.classList.add("is-active"));
+        }
+      });
+    }, {
+      rootMargin: "-30% 0px -60% 0px",
+      threshold: 0.01
+    });
+
+    observedSections.forEach((section) =>
+      navObserver.observe(section)
+    );
+  }
+
+  // Vista de programas, sólo una vez por carga.
+  const programsSection = document.getElementById("consulta");
+  if (programsSection && "IntersectionObserver" in window) {
+    let viewed = false;
+
+    const programsObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !viewed) {
+          viewed = true;
+          track("view_programs", {
+            section_name: "programas_mensuales"
+          });
+          programsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.35 });
+
+    programsObserver.observe(programsSection);
+  }
+
+  // Clics de contacto y ubicación.
+  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      track("click_whatsapp", {
+        link_text: normalize(link.textContent || "whatsapp")
+      });
+    });
+  });
+
+  document
+    .querySelectorAll(
+      'a[href*="maps.app.goo.gl"],a[href*="google.com/maps"]'
+    )
+    .forEach((link) => {
+      link.addEventListener("click", () => {
+        track("click_maps", {
+          link_text: normalize(link.textContent || "google_maps")
+        });
+      });
+    });
+
+  // Formulario: el lead sólo se cuenta cuando Formspree confirma.
+  const form = document.getElementById("leadForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (form) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const phone = form.telefono.value.trim();
+      if (!/^[0-9+\-\s()]{8,}$/.test(phone)) {
         alert("Por favor ingresa un WhatsApp válido.");
         form.telefono.focus();
         return;
       }
 
-      formStatus.style.display = "block";
+      const button = form.querySelector('button[type="submit"]');
+      if (button) button.disabled = true;
 
-      // Evento genérico. Funcionará cuando exista gtag en la página.
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "generate_lead", {
-          event_category: "formulario",
-          event_label: "solicitud_programa_mensual"
+      if (formStatus) {
+        formStatus.style.display = "block";
+        formStatus.textContent = "Enviando solicitud…";
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
         });
+
+        if (!response.ok) {
+          throw new Error("Formspree rechazó el envío.");
+        }
+
+        const supportValue = form.nivel_apoyo.value || "";
+        let program = "sin_definir";
+        let value = 0;
+
+        if (supportValue.includes("Esencial")) {
+          program = "esencial";
+          value = 800;
+        } else if (supportValue.includes("Acompañamiento")) {
+          program = "acompanamiento";
+          value = 1200;
+        } else if (supportValue.includes("Integral")) {
+          program = "integral";
+          value = 1600;
+        }
+
+        track("generate_lead", {
+          form_name: "solicitud_programa_mensual",
+          programa: program,
+          modalidad: normalize(form.modalidad.value),
+          value,
+          currency: "MXN"
+        });
+
+        form.reset();
+        persistCampaign();
+
+        if (formStatus) {
+          formStatus.textContent =
+            "Solicitud enviada. Te contactaremos por WhatsApp.";
+        }
+      } catch (error) {
+        if (formStatus) {
+          formStatus.textContent =
+            "No se pudo enviar. Intenta nuevamente o utiliza WhatsApp.";
+        }
+      } finally {
+        if (button) button.disabled = false;
       }
     });
-
-    // Medición de clics en WhatsApp, agenda y Maps.
-    document.querySelectorAll(".conversion-link").forEach((link) => {
-      link.addEventListener("click", () => {
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "contact", {
-            event_category: "cta",
-            event_label: link.textContent.trim()
-          });
-        }
-      });
-    });
-  </script>
-</body>
+  }
+})();
+</script></body>
 </html>

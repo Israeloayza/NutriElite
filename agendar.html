@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#143642">
+<head><script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+(function(){
+  const KEY = "nutrielite_consent_v1";
+  let stored = null;
+
+  try {
+    stored = localStorage.getItem(KEY);
+  } catch (error) {
+    stored = null;
+  }
+
+  const granted = stored === "granted";
+
+  gtag("consent", "default", {
+    analytics_storage: granted ? "granted" : "denied",
+    ad_storage: granted ? "granted" : "denied",
+    ad_user_data: granted ? "granted" : "denied",
+    ad_personalization: granted ? "granted" : "denied",
+    wait_for_update: 500
+  });
+
+  window.NUTRIELITE_CONSENT_KEY = KEY;
+  window.NUTRIELITE_STORED_CONSENT = stored;
+})();
+</script><script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({
+  'gtm.start': new Date().getTime(), event:'gtm.js'
+});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T34S45NN');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#143642" name="theme-color"/>
 <title>Agendar consulta | NutriElite</title>
-<meta name="description" content="Selecciona tu programa NutriElite y consulta horarios disponibles para atención presencial o en línea.">
+<meta content="Selecciona tu programa NutriElite y consulta horarios disponibles para atención presencial o en línea." name="description"/>
 <style>
 :root{
   --petrol:#143642;
@@ -174,84 +208,242 @@ h1{max-width:850px;margin:14px 0 10px;font-size:clamp(2rem,5vw,3.5rem);line-heig
   .embed-frame{min-height:720px;padding:3px}
   .choice-grid{grid-template-columns:1fr}
 }
+
+
+.cookie-consent{
+  position:fixed;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  width:min(860px,calc(100% - 36px));
+  margin:0 auto;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  border:1px solid rgba(197,154,82,.5);
+  border-radius:18px;
+  background:#0E2B33;
+  color:#FFFFFF;
+  box-shadow:0 24px 65px rgba(0,0,0,.3);
+}
+.cookie-consent[hidden]{display:none!important}
+.cookie-consent__copy{max-width:590px}
+.cookie-consent__copy strong{
+  display:block;
+  margin-bottom:4px;
+  color:#E5C78B;
+  font-size:1rem;
+}
+.cookie-consent__copy p{
+  margin:0;
+  color:rgba(255,255,255,.78);
+  font-size:.84rem;
+  line-height:1.45;
+}
+.cookie-consent__actions{
+  display:flex;
+  flex:0 0 auto;
+  gap:9px;
+}
+.cookie-btn{
+  min-height:42px;
+  padding:9px 13px;
+  border-radius:11px;
+  font:inherit;
+  font-size:.82rem;
+  font-weight:850;
+  cursor:pointer;
+}
+.cookie-btn--secondary{
+  border:1px solid rgba(255,255,255,.35);
+  background:transparent;
+  color:#FFFFFF;
+}
+.cookie-btn--primary{
+  border:1px solid #C59A52;
+  background:#C59A52;
+  color:#17242A;
+}
+.cookie-settings{
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  text-decoration:underline;
+  cursor:pointer;
+}
+@media(max-width:680px){
+  .cookie-consent{
+    bottom:10px;
+    display:block;
+    padding:15px;
+  }
+  .cookie-consent__actions{
+    margin-top:13px;
+  }
+  .cookie-btn{
+    flex:1;
+  }
+}
 </style>
 </head>
-<body>
+<body data-page-type="booking_hub"><noscript>
+<iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-T34S45NN" style="display:none;visibility:hidden" title="Google Tag Manager" width="0"></iframe>
+</noscript>
 <header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="./index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-copy">
-        <strong>NutriElite</strong>
-        <small>Método de Israel Loayza</small>
-      </span>
-    </a>
-    <a class="back-link" href="./index.html">← Volver a la landing</a>
-  </div>
+<div class="topbar-inner">
+<a class="brand" href="./index.html">
+<span aria-hidden="true" class="brand-mark"></span>
+<span class="brand-copy">
+<strong>NutriElite</strong>
+<small>Método de Israel Loayza</small>
+</span>
+</a>
+<a class="back-link" href="./index.html">← Volver a la landing</a>
+</div>
 </header>
-
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Agenda NutriElite</span>
-      <h1>Selecciona tu programa y modalidad</h1>
-      <p class="lead">Después podrás consultar horarios, completar tus datos y realizar el pago mediante Encuadrado.</p>
-    </div>
-  </section>
-
-  <section class="booking-area">
-    <div class="wrap">
-      <h2 class="section-title">Programas disponibles</h2>
-      <p class="section-copy">Elige la opción que corresponde a tu nivel de acompañamiento.</p>
-      <div class="choice-grid">
-        
-    <a class="choice-card anchor-target"
-       id="esencial"
-       href="./agendar-esencial-presencial.html">
-      <span class="tag">Presencial</span>
-      <h2>NutriElite Esencial · Presencial</h2>
-      <p>Consulta presencial mensual con evaluación, plan nutricional y acceso básico a Nutrimind.</p>
-      <span class="price">$800 MXN al mes</span>
-      <span class="action">Consultar horarios</span>
-    </a>
-    
-    <a class="choice-card"
-       
-       href="./agendar-esencial-online.html">
-      <span class="tag">En línea</span>
-      <h2>NutriElite Esencial · Online</h2>
-      <p>Consulta mensual por videollamada, plan nutricional y acceso básico a Nutrimind.</p>
-      <span class="price">$800 MXN al mes</span>
-      <span class="action">Consultar horarios</span>
-    </a>
-    
-    <a class="choice-card"
-       
-       href="./agendar-acompanamiento.html">
-      <span class="tag">Programa mensual</span>
-      <h2>NutriElite Acompañamiento</h2>
-      <p>Consulta mensual, revisión semanal, ajuste intermedio y seguimiento en Nutrimind.</p>
-      <span class="price">$1,200 MXN al mes</span>
-      <span class="action">Consultar horarios</span>
-    </a>
-    
-    <a class="choice-card"
-       
-       href="./agendar-integral.html">
-      <span class="tag">Programa mensual</span>
-      <h2>NutriElite Integral</h2>
-      <p>Dos sesiones individuales, seguimiento semanal, Nutrimind y entrenamiento personalizado.</p>
-      <span class="price">$1,600 MXN al mes</span>
-      <span class="action">Consultar horarios</span>
-    </a>
-    
-      </div>
-    </div>
-  </section>
+<section class="hero">
+<div class="wrap">
+<span class="eyebrow">Agenda NutriElite</span>
+<h1>Selecciona tu programa y modalidad</h1>
+<p class="lead">Después podrás consultar horarios, completar tus datos y realizar el pago mediante Encuadrado.</p>
+</div>
+</section>
+<section class="booking-area">
+<div class="wrap">
+<h2 class="section-title">Programas disponibles</h2>
+<p class="section-copy">Elige la opción que corresponde a tu nivel de acompañamiento.</p>
+<div class="choice-grid">
+<a class="choice-card anchor-target" data-modality="presencial" data-program="esencial" data-value="800" href="./agendar-esencial-presencial.html" id="esencial">
+<span class="tag">Presencial</span>
+<h2>NutriElite Esencial · Presencial</h2>
+<p>Consulta presencial mensual con evaluación, plan nutricional y acceso básico a Nutrimind.</p>
+<span class="price">$800 MXN al mes</span>
+<span class="action">Consultar horarios</span>
+</a>
+<a class="choice-card" data-modality="online" data-program="esencial" data-value="800" href="./agendar-esencial-online.html">
+<span class="tag">En línea</span>
+<h2>NutriElite Esencial · Online</h2>
+<p>Consulta mensual por videollamada, plan nutricional y acceso básico a Nutrimind.</p>
+<span class="price">$800 MXN al mes</span>
+<span class="action">Consultar horarios</span>
+</a>
+<a class="choice-card" data-modality="presencial_online" data-program="acompanamiento" data-value="1200" href="./agendar-acompanamiento.html">
+<span class="tag">Programa mensual</span>
+<h2>NutriElite Acompañamiento</h2>
+<p>Consulta mensual, revisión semanal, ajuste intermedio y seguimiento en Nutrimind.</p>
+<span class="price">$1,200 MXN al mes</span>
+<span class="action">Consultar horarios</span>
+</a>
+<a class="choice-card" data-modality="presencial_online" data-program="integral" data-value="1600" href="./agendar-integral.html">
+<span class="tag">Programa mensual</span>
+<h2>NutriElite Integral</h2>
+<p>Dos sesiones individuales, seguimiento semanal, Nutrimind y entrenamiento personalizado.</p>
+<span class="price">$1,600 MXN al mes</span>
+<span class="action">Consultar horarios</span>
+</a>
+</div>
+</div>
+</section>
 </main>
-
 <footer class="footer">
   Nutriólogo Israel Loayza · Cédula profesional 6492540 · Tlajomulco de Zúñiga, Jalisco
-</footer>
-</body>
+<div style="margin-top:10px"><button class="cookie-settings" data-cookie-settings="" type="button">Preferencias de medición</button></div></footer>
+<div aria-labelledby="cookieTitle" aria-modal="true" class="cookie-consent" hidden="" id="cookieConsent" role="dialog">
+<div class="cookie-consent__copy">
+<strong id="cookieTitle">Privacidad y medición</strong>
+<p>
+      Usamos medición de Google para conocer el tráfico y mejorar la página.
+      No enviamos nombres, teléfonos, diagnósticos ni datos clínicos.
+    </p>
+</div>
+<div class="cookie-consent__actions">
+<button class="cookie-btn cookie-btn--secondary" data-consent-choice="essential" type="button">
+      Solo necesarias
+    </button>
+<button class="cookie-btn cookie-btn--primary" data-consent-choice="granted" type="button">
+      Aceptar medición
+    </button>
+</div>
+</div><script>
+(function(){
+  const banner = document.getElementById("cookieConsent");
+  const settingsButtons = document.querySelectorAll("[data-cookie-settings]");
+  const KEY = window.NUTRIELITE_CONSENT_KEY || "nutrielite_consent_v1";
+
+  const saveChoice = (choice) => {
+    try {
+      localStorage.setItem(KEY, choice);
+    } catch (error) {}
+
+    const granted = choice === "granted";
+
+    gtag("consent", "update", {
+      analytics_storage: granted ? "granted" : "denied",
+      ad_storage: granted ? "granted" : "denied",
+      ad_user_data: granted ? "granted" : "denied",
+      ad_personalization: granted ? "granted" : "denied"
+    });
+
+    window.dataLayer.push({
+      event: "consent_update",
+      consent_state: granted ? "granted" : "essential"
+    });
+
+    if (banner) banner.hidden = true;
+  };
+
+  if (banner && !window.NUTRIELITE_STORED_CONSENT) {
+    banner.hidden = false;
+  }
+
+  document.querySelectorAll("[data-consent-choice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      saveChoice(button.dataset.consentChoice);
+    });
+  });
+
+  settingsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (banner) banner.hidden = false;
+    });
+  });
+})();
+</script><script>
+window.NutriEliteAnalytics = window.NutriEliteAnalytics || {
+  push(eventName, parameters = {}) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: eventName,
+      page_type: document.body.dataset.pageType || "unknown",
+      ...parameters
+    });
+  }
+};
+</script><script>
+(function(){
+  const track = (name, params = {}) =>
+    window.NutriEliteAnalytics.push(name, params);
+
+  track("view_booking_options", {
+    option_count: 4
+  });
+
+  document.querySelectorAll(".choice-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      track("select_program", {
+        programa: card.dataset.program,
+        modalidad: card.dataset.modality,
+        value: Number(card.dataset.value || 0),
+        currency: "MXN"
+      });
+    });
+  });
+})();
+</script></body>
 </html>
