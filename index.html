@@ -1363,9 +1363,19 @@ main{
     background-position:center 22%!important;
   }
 }
+
+.booking-status-note{
+  max-width:850px;
+  margin:18px auto 26px;
+  padding:13px 16px;
+  border:1px solid rgba(111,174,155,.42);
+  border-radius:14px;
+  background:#EEF7F4;
+  color:#143642;
+  text-align:center;
+  font-size:.94rem;
+}
 </style>
-
-
 </head>
 <body><header>
 <div class="container">
@@ -1429,9 +1439,7 @@ main{
 </ul>
 </li>
 <li class="nav-cta">
-<a class="btn btn-primary btn-small booking-link" data-booking="orientacion" href="#">
-                Agendar
-              </a>
+<a class="btn btn-primary btn-small booking-link" data-booking="orientacion" href="#">Ver horarios y agendar</a>
 </li>
 </ul>
 </div>
@@ -1544,9 +1552,7 @@ main{
 <p class="package-frequency">1 consulta individual + app nutricional</p>
 <ul><li>Consulta individual de hasta 60 minutos</li><li>Evaluación de avances y objetivos</li><li>Un plan nutricional mensual</li><li>Aplicación Nutrimind para consultar plan, metas y evolución</li><li>Revisión de estudios y mediciones cuando correspondan</li></ul>
 <p class="package-limit">La aplicación funciona como consulta y registro. No incluye revisión semanal ni entrenamiento personalizado.</p>
-<a class="btn btn-ghost package-select" data-booking="esencial" data-package-value="Consulta mensual + app nutricional · Esencial" href="#">
-          Elegir Esencial
-        </a>
+<a class="btn btn-ghost package-select" data-booking="esencial" data-package-value="Consulta mensual + app nutricional · Esencial" href="#">Elegir modalidad y agendar</a>
 </article>
 <article class="card service-card package-card package-middle" data-app-level="nutrimind-activo">
 <span class="pill">Acompañamiento</span>
@@ -1555,9 +1561,7 @@ main{
 <p class="package-frequency">Consulta mensual + seguimiento semanal</p>
 <ul><li>Una consulta individual mensual</li><li>Plan nutricional y ajuste a los 15 días cuando corresponda</li><li>Nutrimind con registro de alimentos, metas y evolución</li><li>Revisión semanal breve dentro de la aplicación</li><li>Rutina base de actividad física</li><li>Una sesión grupal mensual para resolver dudas generales</li></ul>
 <p class="package-limit">Incluye seguimiento activo en la app. No incluye una segunda sesión individual ni entrenamiento avanzado.</p>
-<a class="btn btn-ghost package-select" data-booking="acompanamiento" data-package-value="Seguimiento semanal + app nutricional · Acompañamiento" href="#">
-          Elegir Acompañamiento
-        </a>
+<a class="btn btn-ghost package-select" data-booking="acompanamiento" data-package-value="Seguimiento semanal + app nutricional · Acompañamiento" href="#">Agendar Acompañamiento</a>
 </article>
 <article class="card service-card package-card package-featured shadow-xl" data-app-level="nutrimind-entrenamiento">
 <div class="best-value">MEJOR VALOR</div>
@@ -1567,9 +1571,7 @@ main{
 <p class="package-frequency">2 sesiones individuales + nutrición y entrenamiento</p>
 <ul><li>Todo lo incluido en Acompañamiento</li><li>Segunda sesión individual de 25 a 30 minutos</li><li>Nutrimind con revisión semanal individual</li><li>Plataforma digital especializada de entrenamiento</li><li>Rutina personalizada con videos, cargas y progresión</li><li>Ajuste mensual del entrenamiento y seguimiento de progreso</li></ul>
 <p class="package-limit package-value-note">Por $400 MXN más recibes una segunda sesión individual y entrenamiento personalizado en una plataforma especializada.</p>
-<a class="btn btn-primary package-select" data-booking="integral" data-package-value="Nutrición + entrenamiento personalizado · Integral" href="#">
-          Elegir Integral
-        </a>
+<a class="btn btn-primary package-select" data-booking="integral" data-package-value="Nutrición + entrenamiento personalizado · Integral" href="#">Agendar Integral</a>
 </article>
 </div>
 <div class="program-note card">
@@ -1940,7 +1942,7 @@ main{
 </section>
 </main>
 <div class="mobile-cta">
-<a class="btn btn-primary booking-link" data-booking="orientacion" href="#">Agendar valoración · $800 MXN</a>
+<a class="btn btn-primary booking-link" data-booking="orientacion" href="#">Ver horarios y agendar</a>
 </div>
 <footer>
 <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
@@ -1964,10 +1966,10 @@ main{
       - Los botones generales abren WhatsApp.
     */
     const BOOKING_URLS = {
-      orientacion: "",
-      esencial: "",
-      acompanamiento: "",
-      integral: ""
+      orientacion: "./agendar.html",
+      esencial: "./agendar.html#esencial",
+      acompanamiento: "./agendar-acompanamiento.html",
+      integral: "./agendar-integral.html"
     };
 
     const WHATSAPP_MESSAGES = {
@@ -1992,7 +1994,11 @@ main{
         const bookingUrl = (BOOKING_URLS[service] || "").trim();
 
         if (bookingUrl) {
-          window.open(bookingUrl, "_blank", "noopener,noreferrer");
+          if (bookingUrl.startsWith("./") || bookingUrl.startsWith("/")) {
+            window.location.href = bookingUrl;
+          } else {
+            window.open(bookingUrl, "_blank", "noopener,noreferrer");
+          }
         } else if (link.classList.contains("package-select")) {
           const packageSelect = document.getElementById("nivel_apoyo");
           const selectionMessage = document.getElementById("selectionMessage");

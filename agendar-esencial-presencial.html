@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#143642">
+<title>NutriElite Esencial · Presencial | Reservar en NutriElite</title>
+<meta name="description" content="Consulta presencial mensual con evaluación, plan nutricional y acceso básico a Nutrimind. Reserva y consulta horarios disponibles mediante Encuadrado.">
+<style>
+:root{
+  --petrol:#143642;
+  --petrol-dark:#0E2B33;
+  --sage:#6FAE9B;
+  --mint:#DCEFE9;
+  --cream:#F7F4ED;
+  --gold:#C59A52;
+  --text:#1D2730;
+  --muted:#607078;
+  --border:#D9E1DF;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:var(--cream);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.55;
+}
+a{color:inherit}
+.topbar{
+  background:var(--petrol-dark);
+  color:var(--white);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.topbar-inner{
+  width:min(1120px,calc(100% - 32px));
+  min-height:76px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+.brand-mark{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:url("./apple-touch-icon.png") center/contain no-repeat;
+}
+.brand-copy strong{display:block;color:#E4C17D;font-size:1.08rem}
+.brand-copy small{display:block;color:rgba(255,255,255,.72);font-size:.76rem}
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--white);
+  text-decoration:none;
+  font-weight:750;
+  font-size:.9rem;
+}
+.hero{
+  padding:52px 0 34px;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(111,174,155,.2),transparent 35%),
+    linear-gradient(135deg,var(--petrol-dark),var(--petrol));
+  color:var(--white);
+}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.eyebrow{
+  display:inline-flex;
+  padding:7px 11px;
+  border:1px solid rgba(229,199,139,.5);
+  border-radius:999px;
+  color:#E5C78B;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.03em;
+}
+h1{max-width:850px;margin:14px 0 10px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.04}
+.lead{max-width:820px;margin:0;color:rgba(255,255,255,.82);font-size:1.04rem}
+.price{display:block;margin-top:17px;color:#E5C78B;font-weight:900;font-size:1.24rem}
+.booking-area{padding:34px 0 64px}
+.booking-shell{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 18px 50px rgba(14,43,51,.1);
+}
+.booking-heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:18px;
+  margin-bottom:18px;
+}
+.booking-heading h2{margin:0;color:var(--petrol);font-size:1.45rem}
+.booking-heading p{margin:5px 0 0;color:var(--muted);font-size:.92rem}
+.secure{
+  flex:0 0 auto;
+  padding:8px 11px;
+  border-radius:999px;
+  background:var(--mint);
+  color:var(--petrol);
+  font-size:.78rem;
+  font-weight:800;
+}
+.embed-frame{
+  min-height:650px;
+  padding:8px;
+  border:1px solid var(--border);
+  border-radius:17px;
+  background:#fff;
+}
+.help{
+  margin-top:18px;
+  padding:14px 16px;
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  background:#FFFDF8;
+  color:var(--muted);
+  font-size:.88rem;
+}
+.footer{
+  padding:24px 16px;
+  background:var(--petrol-dark);
+  color:rgba(255,255,255,.72);
+  text-align:center;
+  font-size:.8rem;
+}
+.choice-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:24px;
+}
+.choice-card{
+  display:flex;
+  flex-direction:column;
+  min-height:230px;
+  padding:22px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--white);
+  text-decoration:none;
+  box-shadow:0 14px 36px rgba(14,43,51,.07);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.choice-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(14,43,51,.12)}
+.choice-card .tag{align-self:flex-start;padding:6px 9px;border-radius:999px;background:var(--mint);color:var(--petrol);font-size:.75rem;font-weight:850}
+.choice-card h2{margin:15px 0 7px;color:var(--petrol);font-size:1.35rem}
+.choice-card p{margin:0;color:var(--muted);font-size:.92rem}
+.choice-card .price{margin-top:auto;padding-top:18px;color:#836126;font-size:1rem}
+.choice-card .action{margin-top:15px;padding:11px 14px;border-radius:12px;background:var(--gold);color:#1F2A2E;text-align:center;font-weight:900}
+.section-title{text-align:center;margin:0;color:var(--petrol);font-size:clamp(1.7rem,4vw,2.5rem)}
+.section-copy{max-width:760px;margin:10px auto 0;text-align:center;color:var(--muted)}
+.anchor-target{scroll-margin-top:90px}
+@media(max-width:720px){
+  .topbar-inner{min-height:68px}
+  .brand-copy small{display:none}
+  .hero{padding:40px 0 28px}
+  .booking-area{padding:24px 0 44px}
+  .booking-shell{padding:14px;border-radius:17px}
+  .booking-heading{display:block}
+  .secure{display:inline-block;margin-top:11px}
+  .embed-frame{min-height:720px;padding:3px}
+  .choice-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./index.html" aria-label="Volver a NutriElite">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-copy">
+        <strong>NutriElite</strong>
+        <small>Método de Israel Loayza</small>
+      </span>
+    </a>
+    <a class="back-link" href="./index.html#consulta">← Volver a programas</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Reserva en línea</span>
+      <h1>NutriElite Esencial · Presencial</h1>
+      <p class="lead">Consulta presencial mensual con evaluación, plan nutricional y acceso básico a Nutrimind.</p>
+      <span class="price">$800 MXN al mes</span>
+    </div>
+  </section>
+
+  <section class="booking-area">
+    <div class="wrap">
+      <div class="booking-shell">
+        <div class="booking-heading">
+          <div>
+            <h2>Selecciona fecha y horario</h2>
+            <p>La disponibilidad, confirmación y pago se administran mediante Encuadrado.</p>
+          </div>
+          <span class="secure">Reserva segura</span>
+        </div>
+        <div class="embed-frame">
+          <div data-encuadrado-inline data-url="https://encuadrado.com/p/nutriologo-samue-israel-loayza/s/nutrielite-esencial-presencial/embed/inline"></div>
+        </div>
+        <div class="help">
+          Revisa que el servicio y la modalidad sean correctos antes de pagar.
+          Para reprogramaciones aplican las condiciones mostradas durante la reserva.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  Nutriólogo Israel Loayza · Cédula profesional 6492540 · Tlajomulco de Zúñiga, Jalisco
+</footer>
+<script src="https://encuadrado.com/p/embed.js" async></script>
+</body>
+</html>
