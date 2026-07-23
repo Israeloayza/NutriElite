@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0E2B33">
-
-  <title>Nutriólogo Israel Loayza | Programas mensuales en Tlajomulco</title>
-  <meta name="description" content="Programas mensuales de nutrición presencial y en línea en Tlajomulco. Consulta desde $800 MXN con aplicación nutricional, seguimiento y entrenamiento según el programa.">
-  <link rel="canonical" href="https://israeloayza.github.io/NutriElite/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:title" content="Programas mensuales de nutrición | Israel Loayza">
-  <meta property="og:description" content="Consulta mensual desde $800 MXN. Elige dirección profesional, seguimiento semanal o nutrición con entrenamiento personalizado.">
-  <meta property="og:url" content="https://israeloayza.github.io/NutriElite/">
-  <meta property="og:image" content="https://israeloayza.github.io/NutriElite/assets/images/israel-loayza.jpg">
-
-  <link rel="icon" href="./favicon.ico">
-  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="manifest" href="./site.webmanifest">
-
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#0E2B33" name="theme-color"/>
+<title>Nutriólogo Israel Loayza | Programas mensuales en Tlajomulco</title>
+<meta content="Programas mensuales de nutrición presencial y en línea en Tlajomulco. Consulta desde $800 MXN con aplicación nutricional, seguimiento y entrenamiento según el programa." name="description"/>
+<link href="https://israeloayza.github.io/NutriElite/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="es_MX" property="og:locale"/>
+<meta content="Programas mensuales de nutrición | Israel Loayza" property="og:title"/>
+<meta content="Consulta mensual desde $800 MXN. Elige dirección profesional, seguimiento semanal o nutrición con entrenamiento personalizado." property="og:description"/>
+<meta content="https://israeloayza.github.io/NutriElite/" property="og:url"/>
+<meta content="https://israeloayza.github.io/NutriElite/assets/images/israel-loayza.jpg" property="og:image"/>
+<link href="./favicon.ico" rel="icon"/>
+<link href="./favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="./apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="./site.webmanifest" rel="manifest"/>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
@@ -44,8 +40,7 @@
       window.NUTRIELITE_STORED_CONSENT = stored;
     })();
   </script>
-
-  <script>
+<script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
       w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});
@@ -57,8 +52,7 @@
       first.parentNode.insertBefore(tag,first);
     })(window,document,"script","dataLayer","GTM-T34S45NN");
   </script>
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":["ProfessionalService","MedicalBusiness"],
@@ -92,7 +86,7 @@
           "itemOffered":{
             "@type":"Service",
             "name":"NutriElite Esencial",
-            "description":"Consulta mensual y Nutrimind para consultar plan, metas y evolución."
+            "description":"Consulta mensual y App de Nutrición para consultar plan, metas y evolución."
           }
         },
         {
@@ -102,7 +96,7 @@
           "itemOffered":{
             "@type":"Service",
             "name":"NutriElite Acompañamiento",
-            "description":"Consulta mensual, ajuste intermedio, Nutrimind y seguimiento semanal."
+            "description":"Consulta mensual, ajuste intermedio, App de Nutrición y seguimiento semanal."
           }
         },
         {
@@ -122,8 +116,7 @@
     ]
   }
   </script>
-
-  <style>
+<style>
     :root{
       --petrol:#0E2B33;
       --petrol-2:#143642;
@@ -1462,543 +1455,621 @@
         transition-duration:.01ms!important;
       }
     }
-  </style>
+  
+
+/* ==========================================================
+   CORRECCIÓN VISUAL INTEGRAL
+   ========================================================== */
+
+.brand-copy strong{
+  color:var(--gold-soft)!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:1.7rem!important;
+  letter-spacing:.025em!important;
+  text-shadow:
+    0 0 12px rgba(229,199,139,.40),
+    0 0 26px rgba(197,154,82,.22)!important;
+  animation:nutriEliteGoldGlow 3.2s ease-in-out infinite alternate;
+}
+
+@keyframes nutriEliteGoldGlow{
+  0%{
+    filter:drop-shadow(0 0 0 rgba(229,199,139,0));
+    text-shadow:
+      0 0 6px rgba(229,199,139,.22),
+      0 0 14px rgba(197,154,82,.10);
+  }
+  100%{
+    filter:drop-shadow(0 0 10px rgba(229,199,139,.38));
+    text-shadow:
+      0 0 14px rgba(229,199,139,.52),
+      0 0 30px rgba(197,154,82,.24);
+  }
+}
+
+.hero-food{
+  position:relative;
+  min-height:460px;
+  margin:0;
+  overflow:hidden;
+  border:1px solid rgba(229,199,139,.32);
+  border-radius:28px;
+  background:var(--petrol-2);
+  box-shadow:0 30px 70px rgba(0,0,0,.24);
+}
+
+.hero-food img{
+  display:block;
+  width:100%;
+  min-height:460px;
+  object-fit:cover;
+  object-position:center;
+}
+
+.hero-food::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(14,43,51,.04) 25%,
+    rgba(14,43,51,.80) 100%
+  );
+  pointer-events:none;
+}
+
+.hero-food__caption{
+  position:absolute;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  z-index:2;
+  padding:17px;
+  border:1px solid rgba(229,199,139,.38);
+  border-radius:16px;
+  background:rgba(10,34,41,.88);
+  backdrop-filter:blur(8px);
+}
+
+.hero-food__caption strong{
+  display:block;
+  color:var(--gold-soft);
+  font-size:1.05rem;
+}
+
+.hero-food__caption span{
+  display:block;
+  margin-top:4px;
+  color:rgba(255,255,255,.72);
+  font-size:.86rem;
+}
+
+.expert-name{
+  margin:-3px 0 14px!important;
+  color:var(--gold-soft)!important;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.35rem,2.5vw,1.9rem);
+}
+
+.profile-photo{
+  display:block!important;
+  visibility:visible!important;
+}
+
+.profile-photo img{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.map-embed-card{
+  overflow:hidden;
+  padding:0!important;
+}
+
+.map-frame{
+  position:relative;
+  min-height:360px;
+  background:#E5ECEA;
+}
+
+.map-frame iframe{
+  display:block;
+  width:100%;
+  min-height:360px;
+  border:0;
+}
+
+.map-embed-card__body{
+  padding:22px;
+}
+
+.map-embed-card__body h3{
+  margin-bottom:7px;
+}
+
+.section-return{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:30px;
+}
+
+.section-return__link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:9px 14px;
+  border:1px solid rgba(111,174,155,.48);
+  border-radius:999px;
+  color:var(--petrol);
+  background:rgba(255,255,255,.78);
+  box-shadow:0 8px 20px rgba(14,43,51,.07);
+  text-decoration:none;
+  font-size:.82rem;
+  font-weight:850;
+}
+
+.section--dark .section-return__link{
+  color:var(--white);
+  border-color:rgba(229,199,139,.42);
+  background:rgba(255,255,255,.07);
+}
+
+@media(max-width:1260px) and (min-width:1101px){
+  .brand-copy strong{
+    font-size:1.48rem!important;
+  }
+}
+
+@media(max-width:1100px){
+  .hero-food,
+  .hero-food img{
+    min-height:400px;
+  }
+}
+
+@media(max-width:620px){
+  .brand-copy strong{
+    font-size:1.22rem!important;
+  }
+
+  .hero-food,
+  .hero-food img{
+    min-height:330px;
+  }
+
+  .hero-food__caption{
+    left:13px;
+    right:13px;
+    bottom:13px;
+    padding:14px;
+  }
+
+  .section-return{
+    justify-content:center;
+    margin-top:24px;
+  }
+
+  .section-return__link{
+    width:100%;
+    min-height:46px;
+  }
+
+  .map-frame,
+  .map-frame iframe{
+    min-height:320px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .brand-copy strong{
+    animation:none!important;
+  }
+}
+</style>
 </head>
-
 <body data-page-type="landing">
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-T34S45NN"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden"
-      title="Google Tag Manager"></iframe>
-  </noscript>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio de NutriElite">
-        <img src="./apple-touch-icon.png" alt="" width="180" height="180">
-        <span class="brand-copy">
-          <strong>NutriElite</strong>
-          <small>Método de Israel Loayza</small>
-        </span>
-      </a>
-
-      <button
-        class="menu-button"
-        id="menuButton"
-        type="button"
-        aria-controls="mainMenu"
-        aria-expanded="false"
-        aria-label="Abrir menú">
-        <span class="menu-button-label">Menú</span>
-        <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
-      </button>
-
-      <nav class="main-menu" id="mainMenu" aria-label="Menú principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#programas">Programas</a>
-        <a href="#metodo">Cómo funciona</a>
-        <a href="#perfil">Perfil</a>
-        <a href="#consultorio">Consultorio</a>
-        <a href="#contacto">Contacto</a>
-        <a class="menu-cta booking-link" data-booking="orientacion" href="./agendar.html">Agendar</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="inicio">
-    <section class="hero section--dark" aria-labelledby="heroTitle">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Nutrición clínica y deportiva · Presencial y en línea</span>
-          <h1 id="heroTitle">Nutriólogo Israel Loayza</h1>
-          <p class="lead">
+<noscript>
+<iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-T34S45NN" style="display:none;visibility:hidden" title="Google Tag Manager" width="0"></iframe>
+</noscript>
+<header class="site-header" id="menu-superior">
+<div class="container header-inner">
+<a aria-label="Ir al inicio de NutriElite" class="brand" href="#inicio">
+<img alt="" height="180" src="./apple-touch-icon.png" width="180"/>
+<span class="brand-copy">
+<strong>NutriElite</strong>
+<small>Método de Israel Loayza</small>
+</span>
+</a>
+<button aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menú" class="menu-button" id="menuButton" type="button">
+<span class="menu-button-label">Menú</span>
+<span aria-hidden="true" class="menu-icon"><i></i><i></i><i></i></span>
+</button>
+<nav aria-label="Menú principal" class="main-menu" id="mainMenu">
+<a href="#inicio">Inicio</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#programas">Programas</a>
+<a href="#metodo">Cómo funciona</a>
+<a href="#perfil">Perfil</a>
+<a href="#consultorio">Consultorio</a>
+<a href="#contacto">Contacto</a>
+<a class="menu-cta booking-link" data-booking="orientacion" href="./agendar.html">Agendar</a>
+</nav>
+</div>
+</header>
+<main id="inicio">
+<section aria-labelledby="heroTitle" class="hero section--dark">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">Nutrición clínica y deportiva · Presencial y en línea</span>
+<h1 id="heroTitle">Nutriólogo Israel Loayza</h1>
+<p class="lead">
             Programas mensuales para mejorar composición corporal, rendimiento y salud metabólica con el nivel de acompañamiento que realmente necesitas.
           </p>
-
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="#programas">Ver programas y precios</a>
-            <a class="btn btn--secondary booking-link" data-booking="orientacion" href="./agendar.html">Ver horarios y agendar</a>
-          </div>
-
-          <div class="hero-price">
-            <strong>Programas desde $800 MXN al mes</strong>
-            <span>Plan personalizado y aplicación Nutrimind incluidos desde Esencial.</span>
-          </div>
-
-          <div class="hero-proof" aria-label="Áreas de atención">
-            <span>Composición corporal</span>
-            <span>Nutrición deportiva</span>
-            <span>Mejora de hábitos</span>
-            <span>Presencial y en línea</span>
-          </div>
-        </div>
-
-        <aside class="hero-visual" aria-label="Resumen de los programas NutriElite">
-          <div class="visual-head">
-            <strong>Una estrategia práctica, no otra dieta aislada</strong>
-            <span>Consulta, seguimiento y entrenamiento según el programa que elijas.</span>
-          </div>
-
-          <div class="visual-programs">
-            <div class="visual-program">
-              <b>01</b>
-              <div>
-                <strong>Esencial</strong>
-                <small>Consulta mensual + Nutrimind</small>
-              </div>
-              <em>$800</em>
-            </div>
-
-            <div class="visual-program">
-              <b>02</b>
-              <div>
-                <strong>Acompañamiento</strong>
-                <small>Seguimiento semanal</small>
-              </div>
-              <em>$1,200</em>
-            </div>
-
-            <div class="visual-program">
-              <b>03</b>
-              <div>
-                <strong>Integral</strong>
-                <small>Nutrición + entrenamiento</small>
-              </div>
-              <em>$1,600</em>
-            </div>
-          </div>
-
-          <p class="visual-note">Atención con cita previa en Tlajomulco Centro y modalidad en línea.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="beneficios">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Una estrategia que puedas sostener</span>
-          <h2>Menos improvisación, más claridad</h2>
-          <p>El plan se adapta a tu contexto y se revisa con base en tus avances, no en soluciones extremas.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card benefit-card">
-            <span class="benefit-number">01</span>
-            <h3>Evaluación personal</h3>
-            <p>Revisamos objetivos, antecedentes, hábitos, horarios y dificultades reales.</p>
-          </article>
-
-          <article class="card benefit-card">
-            <span class="benefit-number">02</span>
-            <h3>Plan aplicable</h3>
-            <p>Recibes indicaciones adaptadas a tus preferencias, posibilidades y rutina.</p>
-          </article>
-
-          <article class="card benefit-card">
-            <span class="benefit-number">03</span>
-            <h3>Ajustes con criterio</h3>
-            <p>Los cambios se realizan según tu respuesta, registros y nivel de acompañamiento.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--white" id="programas">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Programas mensuales</span>
-          <h2>Elige el nivel de apoyo que necesitas</h2>
-          <p>Esencial ofrece dirección mensual; Acompañamiento añade revisión semanal; Integral suma una segunda sesión y entrenamiento personalizado.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card program-card">
-            <span class="program-label">Lo esencial</span>
-            <h3>NutriElite Esencial</h3>
-            <div class="program-price">$800 <small>MXN/mes</small></div>
-            <p class="program-frequency">1 consulta individual + aplicación nutricional</p>
-            <ul>
-              <li>Consulta individual de hasta 60 minutos</li>
-              <li>Plan nutricional mensual</li>
-              <li>Nutrimind para consultar plan, metas y evolución</li>
-              <li>Revisión de estudios y mediciones cuando corresponda</li>
-            </ul>
-            <p class="program-limit">Ideal si eres autónomo. No incluye revisión semanal ni entrenamiento personalizado.</p>
-            <a
-              class="btn btn--secondary package-select"
-              data-booking="esencial"
-              data-programa="esencial"
-              data-modalidad="por_elegir"
-              data-value="800"
-              href="./agendar.html#esencial">
+<div class="hero-actions">
+<a class="btn btn--primary" href="#programas">Ver programas y precios</a>
+<a class="btn btn--secondary booking-link" data-booking="orientacion" href="./agendar.html">Ver horarios y agendar</a>
+</div>
+<div class="hero-price">
+<strong>Programas desde $800 MXN al mes</strong>
+<span>Plan personalizado y aplicación App de Nutrición incluidos desde Esencial.</span>
+</div>
+<div aria-label="Áreas de atención" class="hero-proof">
+<span>Composición corporal</span>
+<span>Nutrición deportiva</span>
+<span>Mejora de hábitos</span>
+<span>Presencial y en línea</span>
+</div>
+</div>
+<figure class="hero-food">
+<img alt="Plato de comida saludable con ingredientes frescos" decoding="async" fetchpriority="high" height="1067" src="./assets/images/hero-nutricion.jpg" width="1600"/>
+<figcaption class="hero-food__caption">
+<strong>Una estrategia práctica, no otra dieta aislada</strong>
+<span>Consulta, seguimiento y entrenamiento según el programa que elijas.</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="section section--soft" id="beneficios">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Una estrategia que puedas sostener</span>
+<h2>Menos improvisación, más claridad</h2>
+<p>El plan se adapta a tu contexto y se revisa con base en tus avances, no en soluciones extremas.</p>
+</div>
+<div class="grid-3">
+<article class="card benefit-card">
+<span class="benefit-number">01</span>
+<h3>Evaluación personal</h3>
+<p>Revisamos objetivos, antecedentes, hábitos, horarios y dificultades reales.</p>
+</article>
+<article class="card benefit-card">
+<span class="benefit-number">02</span>
+<h3>Plan aplicable</h3>
+<p>Recibes indicaciones adaptadas a tus preferencias, posibilidades y rutina.</p>
+</article>
+<article class="card benefit-card">
+<span class="benefit-number">03</span>
+<h3>Ajustes con criterio</h3>
+<p>Los cambios se realizan según tu respuesta, registros y nivel de acompañamiento.</p>
+</article>
+</div>
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+<section class="section section--white" id="programas">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Programas mensuales</span>
+<h2>Elige el nivel de apoyo que necesitas</h2>
+<p>Esencial ofrece dirección mensual; Acompañamiento añade revisión semanal; Integral suma una segunda sesión y entrenamiento personalizado.</p>
+</div>
+<div class="grid-3">
+<article class="card program-card">
+<span class="program-label">Lo esencial</span>
+<h3>NutriElite Esencial</h3>
+<div class="program-price">$800 <small>MXN/mes</small></div>
+<p class="program-frequency">1 consulta individual + aplicación nutricional</p>
+<ul>
+<li>Consulta individual de hasta 60 minutos</li>
+<li>Plan nutricional mensual</li>
+<li>App de Nutrición para consultar plan, metas y evolución</li>
+<li>Revisión de estudios y mediciones cuando corresponda</li>
+</ul>
+<p class="program-limit">Ideal si eres autónomo. No incluye revisión semanal ni entrenamiento personalizado.</p>
+<a class="btn btn--secondary package-select" data-booking="esencial" data-modalidad="por_elegir" data-programa="esencial" data-value="800" href="./agendar.html#esencial">
               Elegir modalidad y agendar
             </a>
-          </article>
-
-          <article class="card program-card">
-            <span class="program-label">Acompañamiento</span>
-            <h3>NutriElite Acompañamiento</h3>
-            <div class="program-price">$1,200 <small>MXN/mes</small></div>
-            <p class="program-frequency">Consulta mensual + seguimiento semanal</p>
-            <ul>
-              <li>Consulta individual mensual</li>
-              <li>Plan nutricional y ajuste intermedio cuando corresponda</li>
-              <li>Nutrimind con revisión semanal breve</li>
-              <li>Rutina base de actividad física</li>
-              <li>Sesión grupal mensual de dudas</li>
-            </ul>
-            <p class="program-limit">Para quien necesita seguimiento activo, sin entrenamiento avanzado.</p>
-            <a
-              class="btn btn--secondary package-select"
-              data-booking="acompanamiento"
-              data-programa="acompanamiento"
-              data-modalidad="presencial_online"
-              data-value="1200"
-              href="./agendar-acompanamiento.html">
+</article>
+<article class="card program-card">
+<span class="program-label">Acompañamiento</span>
+<h3>NutriElite Acompañamiento</h3>
+<div class="program-price">$1,200 <small>MXN/mes</small></div>
+<p class="program-frequency">Consulta mensual + seguimiento semanal</p>
+<ul>
+<li>Consulta individual mensual</li>
+<li>Plan nutricional y ajuste intermedio cuando corresponda</li>
+<li>App de Nutrición con revisión semanal breve</li>
+<li>Rutina base de actividad física</li>
+<li>Sesión grupal mensual de dudas</li>
+</ul>
+<p class="program-limit">Para quien necesita seguimiento activo, sin entrenamiento avanzado.</p>
+<a class="btn btn--secondary package-select" data-booking="acompanamiento" data-modalidad="presencial_online" data-programa="acompanamiento" data-value="1200" href="./agendar-acompanamiento.html">
               Agendar Acompañamiento
             </a>
-          </article>
-
-          <article class="card program-card program-card--featured">
-            <span class="best-value">MEJOR VALOR</span>
-            <span class="program-label">Nutrición + entrenamiento</span>
-            <h3>NutriElite Integral</h3>
-            <div class="program-price">$1,600 <small>MXN/mes</small></div>
-            <p class="program-frequency">2 sesiones individuales + nutrición y entrenamiento</p>
-            <ul>
-              <li>Todo lo incluido en Acompañamiento</li>
-              <li>Segunda sesión individual de 25 a 30 minutos</li>
-              <li>Revisión semanal individual en Nutrimind</li>
-              <li>Plataforma especializada de entrenamiento</li>
-              <li>Rutina con videos, cargas y progresión</li>
-            </ul>
-            <p class="program-limit">Por $400 MXN más añade una segunda sesión y entrenamiento personalizado.</p>
-            <a
-              class="btn btn--primary package-select"
-              data-booking="integral"
-              data-programa="integral"
-              data-modalidad="presencial_online"
-              data-value="1600"
-              href="./agendar-integral.html">
+</article>
+<article class="card program-card program-card--featured">
+<span class="best-value">MEJOR VALOR</span>
+<span class="program-label">Nutrición + entrenamiento</span>
+<h3>NutriElite Integral</h3>
+<div class="program-price">$1,600 <small>MXN/mes</small></div>
+<p class="program-frequency">2 sesiones individuales + nutrición y entrenamiento</p>
+<ul>
+<li>Todo lo incluido en Acompañamiento</li>
+<li>Segunda sesión individual de 25 a 30 minutos</li>
+<li>Revisión semanal individual en App de Nutrición</li>
+<li>Plataforma especializada de entrenamiento</li>
+<li>Rutina con videos, cargas y progresión</li>
+</ul>
+<p class="program-limit">Por $400 MXN más añade una segunda sesión y entrenamiento personalizado.</p>
+<a class="btn btn--primary package-select" data-booking="integral" data-modalidad="presencial_online" data-programa="integral" data-value="1600" href="./agendar-integral.html">
               Agendar Integral
             </a>
-          </article>
-        </div>
-
-        <div class="program-note">
-          <strong>Presencial o en línea.</strong>
+</article>
+</div>
+<div class="program-note">
+<strong>Presencial o en línea.</strong>
           El precio depende del acompañamiento, no de la modalidad. La renovación es mensual y no se garantizan resultados específicos.
         </div>
-      </div>
-    </section>
-
-    <section class="section section--dark" id="metodo">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Cómo funciona</span>
-          <h2>Tu proceso durante el mes</h2>
-          <p>La intensidad del seguimiento cambia según el programa, pero el proceso siempre conserva una dirección clara.</p>
-        </div>
-
-        <div class="steps">
-          <article class="step">
-            <span class="step-number">01</span>
-            <h3>Evaluamos</h3>
-            <p>Definimos objetivo, antecedentes, hábitos y punto de partida.</p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">02</span>
-            <h3>Implementas</h3>
-            <p>Recibes tu plan y utilizas Nutrimind; Integral añade entrenamiento personalizado.</p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">03</span>
-            <h3>Revisamos y ajustamos</h3>
-            <p>Analizamos avances y definimos los cambios o la continuidad del siguiente mes.</p>
-          </article>
-        </div>
-
-        <div class="tech-note">
-          <strong>Una aplicación nutricional desde Esencial.</strong>
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+<section class="section section--dark" id="metodo">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Cómo funciona</span>
+<h2>Tu proceso durante el mes</h2>
+<p>La intensidad del seguimiento cambia según el programa, pero el proceso siempre conserva una dirección clara.</p>
+</div>
+<div class="steps">
+<article class="step">
+<span class="step-number">01</span>
+<h3>Evaluamos</h3>
+<p>Definimos objetivo, antecedentes, hábitos y punto de partida.</p>
+</article>
+<article class="step">
+<span class="step-number">02</span>
+<h3>Implementas</h3>
+<p>Recibes tu plan y utilizas App de Nutrición; Integral añade entrenamiento personalizado.</p>
+</article>
+<article class="step">
+<span class="step-number">03</span>
+<h3>Revisamos y ajustamos</h3>
+<p>Analizamos avances y definimos los cambios o la continuidad del siguiente mes.</p>
+</article>
+</div>
+<div class="tech-note">
+<strong>Una aplicación nutricional desde Esencial.</strong>
           La segunda plataforma se utiliza únicamente en Integral para entrenamiento personalizado.
         </div>
-      </div>
-    </section>
-
-    <section class="section section--dark" id="perfil">
-      <div class="container profile-grid">
-        <figure class="profile-photo">
-          <img
-            src="./assets/images/israel-loayza.jpg"
-            alt="Nutriólogo Israel Loayza"
-            width="720"
-            height="900"
-            loading="lazy"
-            decoding="async">
-        </figure>
-
-        <div>
-          <span class="eyebrow">Tu profesional</span>
-          <h2>Nutriólogo Israel Loayza</h2>
-          <p class="profile-lead">
-            Acompaño a personas que buscan mejorar su composición corporal, rendimiento y salud metabólica mediante planes prácticos, seguimiento profesional y herramientas digitales.
-          </p>
-
-          <div class="credentials">
-            <div class="credential">
-              <strong>UNIVA</strong>
-              <span>Licenciatura en Nutrición</span>
-            </div>
-            <div class="credential">
-              <strong>6492540</strong>
-              <span>Cédula profesional</span>
-            </div>
-            <div class="credential">
-              <strong>+15 años</strong>
-              <span>De trayectoria profesional</span>
-            </div>
-          </div>
-
-          <h3>Experiencia relevante</h3>
-          <p class="muted">
-            Mi trayectoria incluye consulta privada, atención nutricional en diabetes tipo 2 y hemodiálisis, coordinación de áreas de nutrición y entrenamiento, docencia y conferencias.
-          </p>
-
-          <div class="specialties" aria-label="Áreas de atención">
-            <span>Composición corporal</span>
-            <span>Nutrición deportiva</span>
-            <span>Control metabólico</span>
-            <span>Nutrición renal</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="consultorio">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Consulta presencial</span>
-          <h2>Tlajomulco Centro</h2>
-          <p>Atención presencial únicamente con cita previa.</p>
-        </div>
-
-        <div class="location-grid">
-          <article class="card location-card">
-            <h3>Nutriólogo Israel Loayza</h3>
-
-            <div class="contact-line">
-              <strong>Dirección</strong>
-              <span>C. Juárez Eje Sur 81, Centro, 45640 Tlajomulco de Zúñiga, Jal.</span>
-            </div>
-
-            <div class="contact-line">
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/523313430157" target="_blank" rel="noopener">+52 33 1343 0157</a>
-            </div>
-
-            <div class="contact-line">
-              <strong>Atención</strong>
-              <span>Con cita previa.</span>
-            </div>
-
-            <div class="button-row">
-              <a
-                class="btn btn--secondary"
-                href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac"
-                target="_blank"
-                rel="noopener">
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+<section class="section section--dark" id="perfil">
+<div class="container profile-grid">
+<figure class="profile-photo">
+<img alt="Nutriólogo Israel Loayza en fotografía profesional" decoding="async" height="900" loading="lazy" src="./assets/images/israel-loayza.jpg" width="720"/>
+</figure>
+<div>
+<span class="eyebrow">Perfil profesional</span>
+<h2>Conoce a tu Experto</h2><h3 class="expert-name">Nutriólogo Israel Loayza</h3>
+<p class="profile-lead">Acompaño a personas que buscan mejorar su composición corporal, rendimiento o salud metabólica mediante planes prácticos, seguimiento profesional y herramientas digitales.</p>
+<div class="credentials">
+<div class="credential">
+<strong>UNIVA</strong>
+<span>Licenciatura en Nutrición</span>
+</div>
+<div class="credential">
+<strong>6492540</strong>
+<span>Cédula profesional</span>
+</div>
+<div class="credential">
+<strong>+15 años</strong>
+<span>De trayectoria profesional</span>
+</div>
+</div>
+<h3>Experiencia profesional</h3>
+<p class="muted">Mi trayectoria abarca consulta privada; atención nutricional en diabetes tipo 2, enfermedad renal y hemodiálisis; coordinación de programas integrales; docencia universitaria; participación en conferencias.</p>
+<div aria-label="Áreas de atención" class="specialties">
+<span>Composición corporal</span>
+<span>Nutrición deportiva</span>
+<span>Control metabólico</span>
+<span>Nutrición renal</span>
+</div>
+</div>
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+<section class="section section--soft" id="consultorio">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Consulta presencial</span>
+<h2>Tlajomulco Centro</h2>
+<p>Atención presencial únicamente con cita previa.</p>
+</div>
+<div class="location-grid">
+<article class="card location-card">
+<h3>Nutriólogo Israel Loayza</h3>
+<div class="contact-line">
+<strong>Dirección</strong>
+<span>C. Juárez Eje Sur 81, Centro, 45640 Tlajomulco de Zúñiga, Jal.</span>
+</div>
+<div class="contact-line">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/523313430157" rel="noopener" target="_blank">+52 33 1343 0157</a>
+</div>
+<div class="contact-line">
+<strong>Atención</strong>
+<span>Con cita previa.</span>
+</div>
+<div class="button-row">
+<a class="btn btn--secondary" href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" rel="noopener" target="_blank">
                 Abrir en Google Maps
               </a>
-              <a
-                class="btn btn--secondary"
-                href="https://g.page/r/CaDq-OcBwQxxEBE/review"
-                target="_blank"
-                rel="noopener">
+<a class="btn btn--secondary" href="https://g.page/r/CaDq-OcBwQxxEBE/review" rel="noopener" target="_blank">
                 Dejar una reseña
               </a>
-            </div>
-          </article>
-
-          <article class="card map-card">
-            <span class="eyebrow">Ubicación</span>
-            <h3>Consulta profesional en el centro de Tlajomulco</h3>
-            <p>Revisa la ruta, confirma tu horario y llega únicamente con cita previa.</p>
-            <div class="button-row">
-              <a
-                class="btn btn--primary"
-                href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac"
-                target="_blank"
-                rel="noopener">
-                Cómo llegar
-              </a>
-              <a
-                class="btn btn--secondary booking-link"
-                data-booking="orientacion"
-                href="./agendar.html">
-                Ver horarios
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--white" id="contacto">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Contacto</span>
-          <h2>Agenda o recibe una recomendación</h2>
-          <p>Reserva directamente cuando ya sabes qué programa elegir; utiliza el formulario cuando necesitas orientación.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="card form-card">
-            <h3>¿Todavía no sabes cuál elegir?</h3>
-            <p class="muted">Déjanos tus datos y te indicaremos el programa más coherente con tu objetivo.</p>
-
-            <form id="leadForm" action="https://formspree.io/f/mpwlnbpa" method="POST">
-              <input type="hidden" name="utm_source" id="tracking_utm_source">
-              <input type="hidden" name="utm_medium" id="tracking_utm_medium">
-              <input type="hidden" name="utm_campaign" id="tracking_utm_campaign">
-              <input type="hidden" name="utm_term" id="tracking_utm_term">
-              <input type="hidden" name="utm_content" id="tracking_utm_content">
-              <input type="hidden" name="gclid" id="tracking_gclid">
-              <input type="hidden" name="landing_page" id="tracking_landing_page">
-
-              <div class="field-grid">
-                <div class="field">
-                  <label for="nombre">Nombre</label>
-                  <input id="nombre" name="nombre" type="text" autocomplete="name" required>
-                </div>
-
-                <div class="field">
-                  <label for="telefono">WhatsApp</label>
-                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
-                </div>
-
-                <div class="field field--full">
-                  <label for="objetivo">Objetivo principal</label>
-                  <select id="objetivo" name="objetivo" required>
-                    <option value="">Selecciona una opción</option>
-                    <option>Reducir grasa corporal</option>
-                    <option>Aumentar masa muscular</option>
-                    <option>Mejorar hábitos y relación con la alimentación</option>
-                    <option>Mejorar control de glucosa</option>
-                    <option>Recibir orientación en nutrición renal</option>
-                    <option>Mejorar rendimiento deportivo</option>
-                    <option>Otro objetivo</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="nivel_apoyo">Nivel de apoyo</label>
-                  <select id="nivel_apoyo" name="nivel_apoyo" required>
-                    <option value="">Selecciona una opción</option>
-                    <option>Consulta mensual + app nutricional · Esencial</option>
-                    <option>Seguimiento semanal + app nutricional · Acompañamiento</option>
-                    <option>Nutrición + entrenamiento personalizado · Integral</option>
-                    <option>No estoy seguro; necesito orientación</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="modalidad">Modalidad</label>
-                  <select id="modalidad" name="modalidad" required>
-                    <option value="">Selecciona una opción</option>
-                    <option>Presencial en Tlajomulco</option>
-                    <option>Consulta en línea</option>
-                  </select>
-                </div>
-              </div>
-
-              <label class="checkbox-row">
-                <input type="checkbox" name="acepta_contacto" required>
-                <span>Acepto ser contactado por WhatsApp para coordinar mi solicitud y he leído el aviso de privacidad.</span>
-              </label>
-
-              <button class="btn btn--primary" type="submit">Recibir recomendación</button>
-              <p class="form-status" id="formStatus" aria-live="polite"></p>
-              <p class="microcopy">Este formulario no confirma una cita. Recibirás la recomendación y el enlace de reserva.</p>
-            </form>
-          </article>
-
-          <div class="contact-stack">
-            <article class="card booking-card">
-              <span class="eyebrow">Reserva directa</span>
-              <h3>¿Ya sabes qué programa quieres?</h3>
-              <p class="muted">Consulta horarios y realiza tu reserva mediante Encuadrado.</p>
-              <a class="btn btn--primary booking-link" data-booking="orientacion" href="./agendar.html">Ver horarios y agendar</a>
-              <div class="button-row">
-                <a class="btn btn--secondary" href="https://wa.me/523313430157" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card faq-card">
-              <h3>Preguntas frecuentes</h3>
-
-              <details>
-                <summary>¿Cuál programa me conviene?</summary>
-                <p>Esencial es para pacientes autónomos; Acompañamiento añade revisión semanal; Integral suma entrenamiento personalizado y una segunda sesión.</p>
-              </details>
-
-              <details>
-                <summary>¿Puedo recibir consulta en línea?</summary>
-                <p>Sí. La entrevista, el plan y el seguimiento pueden realizarse en línea.</p>
-              </details>
-
-              <details>
-                <summary>¿Puedo cambiar de programa?</summary>
-                <p>Sí. El cambio se realiza al iniciar un nuevo periodo mensual, según disponibilidad y necesidades.</p>
-              </details>
-
-              <details>
-                <summary>¿Los resultados están garantizados?</summary>
-                <p>No. La evolución depende de la situación individual, la adherencia, el seguimiento y otros factores personales y clínicos.</p>
-              </details>
-
-              <details id="privacidad">
-                <summary>Aviso de privacidad</summary>
-                <p>Los datos se utilizarán únicamente para responder tu solicitud, coordinar citas y dar seguimiento administrativo. Puedes solicitar acceso, corrección o eliminación mediante el contacto publicado.</p>
-              </details>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Nutriólogo Israel Loayza · Método NutriElite</span>
-      <div class="footer-links">
-        <a href="#privacidad">Privacidad</a>
-        <a href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" target="_blank" rel="noopener">Google Maps</a>
-        <a href="https://wa.me/523313430157" target="_blank" rel="noopener">WhatsApp</a>
-        <button type="button" data-cookie-settings>Preferencias de medición</button>
-      </div>
-    </div>
-  </footer>
-
-  <div class="cookie-consent" id="cookieConsent" hidden role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
-    <div class="cookie-copy">
-      <strong id="cookieTitle">Privacidad y medición</strong>
-      <p>Usamos medición de Google para conocer el tráfico y mejorar la página. No enviamos nombres, teléfonos, diagnósticos ni datos clínicos.</p>
-    </div>
-    <div class="cookie-actions">
-      <button class="cookie-essential" type="button" data-consent-choice="essential">Solo necesarias</button>
-      <button class="cookie-accept" type="button" data-consent-choice="granted">Aceptar medición</button>
-    </div>
-  </div>
-
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Volver al inicio">↑</button>
-
-  <script>
+</div>
+</article>
+<article class="card map-embed-card">
+<div class="map-frame">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=C.%20Ju%C3%A1rez%20Eje%20Sur%2081%2C%20Centro%2C%2045640%20Tlajomulco%20de%20Z%C3%BA%C3%B1iga%2C%20Jalisco&amp;output=embed" title="Mapa del consultorio del Nutriólogo Israel Loayza"></iframe>
+</div>
+<div class="map-embed-card__body">
+<h3>Ubicación del consultorio</h3>
+<p class="muted">
+          C. Juárez Eje Sur 81, Centro, 45640 Tlajomulco de Zúñiga, Jal.
+        </p>
+<div class="button-row">
+<a class="btn btn--primary" href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" rel="noopener" target="_blank">
+            Abrir ruta en Google Maps
+          </a>
+<a class="btn btn--secondary booking-link" data-booking="orientacion" href="./agendar.html">
+            Ver horarios
+          </a>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+<section class="section section--white" id="contacto">
+<div class="container">
+<div class="section-heading">
+<span class="eyebrow">Contacto</span>
+<h2>Agenda o recibe una recomendación</h2>
+<p>Reserva directamente cuando ya sabes qué programa elegir; utiliza el formulario cuando necesitas orientación.</p>
+</div>
+<div class="contact-grid">
+<article class="card form-card">
+<h3>¿Todavía no sabes cuál elegir?</h3>
+<p class="muted">Déjanos tus datos y te indicaremos el programa más coherente con tu objetivo.</p>
+<form action="https://formspree.io/f/mpwlnbpa" id="leadForm" method="POST">
+<input id="tracking_utm_source" name="utm_source" type="hidden"/>
+<input id="tracking_utm_medium" name="utm_medium" type="hidden"/>
+<input id="tracking_utm_campaign" name="utm_campaign" type="hidden"/>
+<input id="tracking_utm_term" name="utm_term" type="hidden"/>
+<input id="tracking_utm_content" name="utm_content" type="hidden"/>
+<input id="tracking_gclid" name="gclid" type="hidden"/>
+<input id="tracking_landing_page" name="landing_page" type="hidden"/>
+<div class="field-grid">
+<div class="field">
+<label for="nombre">Nombre</label>
+<input autocomplete="name" id="nombre" name="nombre" required="" type="text"/>
+</div>
+<div class="field">
+<label for="telefono">WhatsApp</label>
+<input autocomplete="tel" id="telefono" inputmode="tel" name="telefono" required="" type="tel"/>
+</div>
+<div class="field field--full">
+<label for="objetivo">Objetivo principal</label>
+<select id="objetivo" name="objetivo" required="">
+<option value="">Selecciona una opción</option>
+<option>Reducir grasa corporal</option>
+<option>Aumentar masa muscular</option>
+<option>Mejorar hábitos y relación con la alimentación</option>
+<option>Mejorar control de glucosa</option>
+<option>Recibir orientación en nutrición renal</option>
+<option>Mejorar rendimiento deportivo</option>
+<option>Otro objetivo</option>
+</select>
+</div>
+<div class="field">
+<label for="nivel_apoyo">Nivel de apoyo</label>
+<select id="nivel_apoyo" name="nivel_apoyo" required="">
+<option value="">Selecciona una opción</option>
+<option>Consulta mensual + app nutricional · Esencial</option>
+<option>Seguimiento semanal + app nutricional · Acompañamiento</option>
+<option>Nutrición + entrenamiento personalizado · Integral</option>
+<option>No estoy seguro; necesito orientación</option>
+</select>
+</div>
+<div class="field">
+<label for="modalidad">Modalidad</label>
+<select id="modalidad" name="modalidad" required="">
+<option value="">Selecciona una opción</option>
+<option>Presencial en Tlajomulco</option>
+<option>Consulta en línea</option>
+</select>
+</div>
+</div>
+<label class="checkbox-row">
+<input name="acepta_contacto" required="" type="checkbox"/>
+<span>Acepto ser contactado por WhatsApp para coordinar mi solicitud y he leído el aviso de privacidad.</span>
+</label>
+<button class="btn btn--primary" type="submit">Recibir recomendación</button>
+<p aria-live="polite" class="form-status" id="formStatus"></p>
+<p class="microcopy">Este formulario no confirma una cita. Recibirás la recomendación y el enlace de reserva.</p>
+</form>
+</article>
+<div class="contact-stack">
+<article class="card booking-card">
+<span class="eyebrow">Reserva directa</span>
+<h3>¿Ya sabes qué programa quieres?</h3>
+<p class="muted">Consulta horarios y realiza tu reserva mediante Encuadrado.</p>
+<a class="btn btn--primary booking-link" data-booking="orientacion" href="./agendar.html">Ver horarios y agendar</a>
+<div class="button-row">
+<a class="btn btn--secondary" href="https://wa.me/523313430157" rel="noopener" target="_blank">Preguntar por WhatsApp</a>
+</div>
+</article>
+<article class="card faq-card">
+<h3>Preguntas frecuentes</h3>
+<details>
+<summary>¿Cuál programa me conviene?</summary>
+<p>Esencial es para pacientes autónomos; Acompañamiento añade revisión semanal; Integral suma entrenamiento personalizado y una segunda sesión.</p>
+</details>
+<details>
+<summary>¿Puedo recibir consulta en línea?</summary>
+<p>Sí. La entrevista, el plan y el seguimiento pueden realizarse en línea.</p>
+</details>
+<details>
+<summary>¿Puedo cambiar de programa?</summary>
+<p>Sí. El cambio se realiza al iniciar un nuevo periodo mensual, según disponibilidad y necesidades.</p>
+</details>
+<details>
+<summary>¿Los resultados están garantizados?</summary>
+<p>No. La evolución depende de la situación individual, la adherencia, el seguimiento y otros factores personales y clínicos.</p>
+</details>
+<details id="privacidad">
+<summary>Aviso de privacidad</summary>
+<p>Los datos se utilizarán únicamente para responder tu solicitud, coordinar citas y dar seguimiento administrativo. Puedes solicitar acceso, corrección o eliminación mediante el contacto publicado.</p>
+</details>
+</article>
+</div>
+</div>
+</div>
+<div class="container section-return"><a aria-label="Volver al menú principal" class="section-return__link" href="#menu-superior">↑ Volver al menú</a></div></section>
+</main>
+<footer>
+<div class="container footer-inner">
+<span>© <span id="year"></span> Nutriólogo Israel Loayza · Método NutriElite</span>
+<div class="footer-links">
+<a href="#privacidad">Privacidad</a>
+<a href="https://maps.app.goo.gl/xZvEp3uFMTS1bKko6?g_st=ac" rel="noopener" target="_blank">Google Maps</a>
+<a href="https://wa.me/523313430157" rel="noopener" target="_blank">WhatsApp</a>
+<button data-cookie-settings="" type="button">Preferencias de medición</button>
+</div>
+</div>
+</footer>
+<div aria-labelledby="cookieTitle" aria-modal="true" class="cookie-consent" hidden="" id="cookieConsent" role="dialog">
+<div class="cookie-copy">
+<strong id="cookieTitle">Privacidad y medición</strong>
+<p>Usamos medición de Google para conocer el tráfico y mejorar la página. No enviamos nombres, teléfonos, diagnósticos ni datos clínicos.</p>
+</div>
+<div class="cookie-actions">
+<button class="cookie-essential" data-consent-choice="essential" type="button">Solo necesarias</button>
+<button class="cookie-accept" data-consent-choice="granted" type="button">Aceptar medición</button>
+</div>
+</div>
+<button aria-label="Volver al inicio" class="back-to-top" id="backToTop" type="button">↑</button>
+<script>
     window.NutriEliteAnalytics = window.NutriEliteAnalytics || {
       push(eventName,parameters={}){
         window.dataLayer = window.dataLayer || [];
